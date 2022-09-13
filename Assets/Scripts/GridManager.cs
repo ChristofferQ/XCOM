@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GridManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] private int _width, _height;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+  [SerializeField] private Tile _tilePrefab;
+
+  void Start() {
+    GenerateGrid();
+  }
+
+  void GenerateGrid() {
+    for (int x = 0; x < _width; x++) {
+        for (int y = 0; y < _height; y++) {
+            var spawnedTile = Instantiate(_tilePrefab, new Vector3(x,y), Quaternion.identity);
+            spawnedTile.name = $"Tile {x} {y}";
+
+            var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
+            spawnedTile.Init(isOffset);
+        }
     }
+  }
 }
