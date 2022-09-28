@@ -21,11 +21,6 @@ public class GridManager : MonoBehaviour
             var spawnedTile = Instantiate(_tilePrefab, new Vector3(x,y,z), Quaternion.identity);
             spawnedTile.name = $"Tile {x} {y} {z}";
 
-<<<<<<< HEAD
-=======
-            
-
->>>>>>> main
             //Make every 2nd tile an offset color (Only works for x and z axis)
             var isOffset = (x % 2 == 0 && z % 2 != 0) || (x % 2 != 0 && z % 2 == 0);
             spawnedTile.Init(isOffset);
