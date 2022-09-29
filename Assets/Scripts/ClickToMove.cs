@@ -22,7 +22,7 @@ public class ClickToMove : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 Debug.Log(hit.collider.gameObject.name);
-                targetLocation = hit.point;
+                targetLocation = hit.collider.gameObject.transform.position;
             }
         }
         // If we are within stoppingDistance (defined in the navmeshagent component in the inspector), 
