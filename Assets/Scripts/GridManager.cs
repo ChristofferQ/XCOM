@@ -41,4 +41,9 @@ public class GridManager : MonoBehaviour
     }
     return null;
   } 
+
+  public Dictionary<Vector2, Tile> GetTileMap()
+  {
+    return this._tiles;
+  }
 }

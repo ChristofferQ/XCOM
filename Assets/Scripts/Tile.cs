@@ -8,6 +8,8 @@ public class Tile : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private GameObject _highlight;
 
+    public bool walkable = true; 
+
     //void Awake() 
     //{
     //    SetColor();
