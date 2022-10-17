@@ -16,7 +16,8 @@ public class MoveShadow : MonoBehaviour
     void FixedUpdate()
     {
         //FirstFuckaround();
-        SecondFuckaround(); 
+        //SecondFuckaround();
+        //ThirdFuckaround 
     } 
 
     private void FirstFuckaround() 
@@ -80,5 +81,10 @@ public class MoveShadow : MonoBehaviour
         {
             t.GetComponent<Renderer>().material.color = shadowColor;
         }
+    }
+
+    private void ThirdFuckaround() {
+
+
     }
 }
