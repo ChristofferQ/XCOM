@@ -38,6 +38,21 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
     }
 
+     public void AllHerosDead()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);       
+    }
+
+    public void AllEnemysDead()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);

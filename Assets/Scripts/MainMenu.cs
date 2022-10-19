@@ -10,8 +10,19 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
    }
 
+   public void Credit()
+    {
+        SceneManager.LoadScene("CreditScene");
+    }
+
    public void QuitGame()
    {
         Application.Quit();
    }
+
+   public void BackToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
