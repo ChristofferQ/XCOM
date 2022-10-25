@@ -16,7 +16,7 @@ public class ClickToMove : MonoBehaviour
     void Update()
     {
         // Find the new targetLocation by clicking with the mouse
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
