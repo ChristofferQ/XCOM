@@ -5,15 +5,19 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] private Color _baseColor, _offsetColor;
+    [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private GameObject _highlight;
 
-    public bool _iswalkable = true; 
-
+    //void Awake() 
+    //{
+    //    SetColor();
+    //}
     public void Init(bool isOffset) {
         GetComponent<Renderer>().material.color = isOffset ? _offsetColor : _baseColor;
     }
 
     void OnMouseEnter() {
+        Debug.Log(gameObject.name);
         _highlight.SetActive(true);
     }
 
@@ -21,4 +25,9 @@ public class Tile : MonoBehaviour
         _highlight.SetActive(false);
     }
 
+    //public void SetColor()
+    //{
+    //    GetComponent<Renderer>().material.color = _offsetColor;
+    //}
+  
 }
