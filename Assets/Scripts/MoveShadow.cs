@@ -10,14 +10,20 @@ public class MoveShadow : MonoBehaviour
     [SerializeField] private Color shadowColor;
 
     [SerializeField] private GridManager gridManager;
-
+    GameObject player; 
     List<Tile> walkableTiles = new List<Tile>();
+
+    void Awake() 
+    {
+        player = GameObject.Find("Player"); // this should only be added to the active (selected) player; 
+        
+    }
 
     void FixedUpdate()
     {
         //FirstFuckaround();
-        //SecondFuckaround();
-        //ThirdFuckaround 
+        SecondFuckaround();
+        //GeneratePathFindingGraph(); 
     } 
 
     private void FirstFuckaround() 
@@ -51,7 +57,6 @@ public class MoveShadow : MonoBehaviour
     {
         walkableTiles = new List<Tile>();
 
-        var player = GameObject.Find("Player"); // WHO THE FUCK WOULD DO THIS!?
 
         var playerPosRaw = new Vector2(
             Mathf.Floor(player.transform.position.x),
@@ -83,8 +88,31 @@ public class MoveShadow : MonoBehaviour
         }
     }
 
-    private void ThirdFuckaround() {
+    /*
+    //Change this to GeneratePathFindingGraph()
+    private void GeneratePathFindingGraph() 
+    {
+        graph = new Node[mapSizeX,mapSizeY];
 
+        for(int x = 0; x < mapSizeX; x++) {
+            for(int y = 0; y < mapSizeY; y++)
 
+            //4 way diretional movement
+            //Add x,y + and x,y - for diagonal movement
+            if(x > 0)
+            graph[x,y].neighbours.Add(graph[x-1,y]);
+            if(x < mapSizeX -1)
+            graph[x,y].neighbours.Add(graph[x+1,y]);
+            if(y > 0)
+            graph[x,y].neighbours.Add(graph[x,y-1]);
+            if(y < mapSizeY -1)
+            graph[x,y].neighbours.Add(graph[x,y+1]);
+
+            //Something to limit range ie. speed++ or count++
+
+            //Something to color the walkable tiles maybe??
+            
+        }
     }
+    */
 }

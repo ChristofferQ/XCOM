@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class SelectUnit : MonoBehaviour
 {
-
     public static GameObject controlledUnit = null;
-    
-
 
     void Start()
     {  
