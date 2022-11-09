@@ -9,10 +9,14 @@ public class ClickToMove : MonoBehaviour
     private Vector3 targetLocation;
     private UnityEngine.AI.NavMeshAgent navMeshAgent;
 
-    void Start()
+    private void OnEnable() 
     {
-        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        if (!navMeshAgent)
+            navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        
+        this.targetLocation = transform.position;
     }
+
     void Update()
     {
         // Find the new targetLocation by clicking with the mouse
