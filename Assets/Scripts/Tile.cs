@@ -6,8 +6,14 @@ public class Tile : MonoBehaviour
 {
     [SerializeField] private Color _baseColor, _offsetColor;
     [SerializeField] private GameObject _highlight;
+    public GameObject rangeHighlight;
+    public bool isCheck;
+    public int dist; 
+    public bool Walkable = true; 
+    public Tile parent; 
+    public bool inRange;
+    
 
-    public bool _iswalkable = true; 
 
     public void Init(bool isOffset) {
         GetComponent<Renderer>().material.color = isOffset ? _offsetColor : _baseColor;

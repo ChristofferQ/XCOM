@@ -33,6 +33,10 @@ public class PlayerManager : MonoBehaviour
         this.selectedUnit = unit; 
         this.selectedUnit.GetComponent<NavMeshAgent>().SetDestination(this.selectedUnit.transform.position);
         this.selectedUnit.GetComponent<ClickToMove>().enabled = true;
+
+        var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
+        var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
+        MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
     }
 
     private void DeselectUnit()

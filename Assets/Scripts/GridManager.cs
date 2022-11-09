@@ -8,9 +8,12 @@ public class GridManager : MonoBehaviour
   [SerializeField] private int _width, _height, _depth;
   [SerializeField] private Tile _tilePrefab;
 
-  private Dictionary<Vector2, Tile> _tiles;
+  public static GridManager Instance;
+
+  public Dictionary<Vector2, Tile> _tiles;
 
   void Start() {
+    Instance = this; 
     GenerateGrid();
   }
 
@@ -47,5 +50,18 @@ public class GridManager : MonoBehaviour
   public Dictionary<Vector2, Tile> GetTileMap()
   {
     return this._tiles;
+  }
+
+  public Vector2 GetCoordinateFromWorldPos(Vector3 pos)
+  {
+    return GetCoordinateFromWorldPos(new Vector2(pos.x, pos.z));
+  }
+
+  public Vector2 GetCoordinateFromWorldPos(Vector2 pos) 
+  {
+    return new Vector2(
+            Mathf.Floor(pos.x),
+            Mathf.Floor(pos.y)
+        );
   }
 }
