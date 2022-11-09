@@ -6,8 +6,6 @@ using UnityEngine.AI;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private GameObject selectedUnit = null; 
-
-
     [SerializeField] private List<GameObject> OwnedUnits = new List<GameObject>(); 
 
     void Awake() 
@@ -25,6 +23,8 @@ public class PlayerManager : MonoBehaviour
 
     private void SelectUnit(GameObject unit) 
     {
+        if (!unit) return; 
+        
         // disable ClickToMove script on current selectedUnit
         if (this.selectedUnit != null)
             this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
@@ -37,6 +37,8 @@ public class PlayerManager : MonoBehaviour
 
     private void DeselectUnit()
     {
+        if (!this.selectedUnit) return; 
+        
         this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
         this.selectedUnit = null;
     }
