@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class ClickToMove : MonoBehaviour
-
 {
     private Vector3 targetLocation;
     private UnityEngine.AI.NavMeshAgent navMeshAgent;
@@ -26,7 +25,11 @@ public class ClickToMove : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 Debug.Log(hit.collider.gameObject.name);
+                if (navMeshAgent.isStopped = false) return; // Already moving!  
+
                 targetLocation = hit.collider.gameObject.transform.position;
+                MovementManager.Instance.CleanMovementTiles();
+
             }
         }
         // If we are within stoppingDistance (defined in the navmeshagent component in the inspector), 
@@ -45,6 +48,9 @@ public class ClickToMove : MonoBehaviour
 
             navMeshAgent.isStopped = false;
             navMeshAgent.SetDestination(targetLocation);
+
+            //PlayerManager.Instance.DeselectUnit(); // this will disable this ClickToMove script! 
+
         }
     }
 }

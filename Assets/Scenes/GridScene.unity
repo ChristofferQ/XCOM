@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 1006020319}
   - component: {fileID: 1006020318}
   - component: {fileID: 1006020320}
+  - component: {fileID: 1006020321}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -440,6 +441,7 @@ MonoBehaviour:
   OwnedUnits:
   - {fileID: 8437793412490517527}
   - {fileID: 1472404657}
+  isPerformingAction: 0
 --- !u!4 &1006020319
 Transform:
   m_ObjectHideFlags: 0
@@ -471,6 +473,18 @@ MonoBehaviour:
   yPos: 0
   shadowColor: {r: 0, g: 0, b: 0, a: 0}
   gridManager: {fileID: 0}
+--- !u!114 &1006020321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006020317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bbd6f83e867d541b449aef2edd62b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1254139293
 GameObject:
   m_ObjectHideFlags: 0

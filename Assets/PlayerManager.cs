@@ -7,9 +7,12 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private GameObject selectedUnit = null; 
     [SerializeField] private List<GameObject> OwnedUnits = new List<GameObject>(); 
+    public bool isPerformingAction = false;
+    public static PlayerManager Instance; 
 
     void Awake() 
     {
+        Instance = this;
         StopAllUnitsMovement();
     }
 
@@ -24,7 +27,8 @@ public class PlayerManager : MonoBehaviour
     private void SelectUnit(GameObject unit) 
     {
         if (!unit) return; 
-        
+        if (isPerformingAction) return;
+
         // disable ClickToMove script on current selectedUnit
         if (this.selectedUnit != null)
             this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
@@ -39,12 +43,13 @@ public class PlayerManager : MonoBehaviour
         MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
     }
 
-    private void DeselectUnit()
+    public void DeselectUnit()
     {
         if (!this.selectedUnit) return; 
         
         this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
         this.selectedUnit = null;
+        MovementManager.Instance.CleanMovementTiles();
     }
 
     void Update() 
