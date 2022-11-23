@@ -26,8 +26,20 @@ public class ClickToMove : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name);
                 if (navMeshAgent.isStopped = false) return; // Already moving!  
+                
+                var tmp2Dpos = new Vector2(
+                    hit.collider.gameObject.transform.position.x,
+                    hit.collider.gameObject.transform.position.z);
 
-                targetLocation = hit.collider.gameObject.transform.position;
+                var targetTile = GridManager.Instance.GetTileAtPosition(tmp2Dpos);
+                
+                Debug.Log("target tile: "+targetTile.transform.position+ " inRange: "+targetTile.inRange);
+                if (targetTile.inRange)
+                {
+                    targetLocation = targetTile.transform.position;
+
+                }
+    
                 MovementManager.Instance.CleanMovementTiles();
 
             }
