@@ -12,12 +12,12 @@ public class GridManager : MonoBehaviour
 
   public Dictionary<Vector2, Tile> _tiles;
 
-  void Start() {
+  void Awake() {
     Instance = this; 
-    GenerateGrid();
+    //GenerateGrid();
   }
 
-  void GenerateGrid() {
+  public void GenerateGrid() {
 
     _tiles = new Dictionary<Vector2, Tile>();
     
@@ -37,7 +37,8 @@ public class GridManager : MonoBehaviour
         }
     }
     //Add NavMesh
-    UnityEditor.AI.NavMeshBuilder.BuildNavMesh();    
+    UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
+    GameManager.Instance.ChangeState(GameState.HerosTurn);// Change to spawnheros    
   }
 
   public Tile GetTileAtPosition(Vector2 pos) {
