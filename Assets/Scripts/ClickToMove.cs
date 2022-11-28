@@ -25,7 +25,8 @@ public class ClickToMove : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 Debug.Log(hit.collider.gameObject.name);
-                if (navMeshAgent.isStopped = false) return; // Already moving!  
+                // Jepser made this, but it doesn't really do anything we wanted, delete it soon^tm
+                //if (navMeshAgent.isStopped = false) return; // Already moving!  
                 
                 var tmp2Dpos = new Vector2(
                     hit.collider.gameObject.transform.position.x,
