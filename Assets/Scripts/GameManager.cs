@@ -26,12 +26,12 @@ public class GameManager : MonoBehaviour
             case GameState.GenerateGrid:
                 GridManager.Instance.GenerateGrid();
                 break;
-            // case GameState.SpawnHeros:
-            //     UnitManager.Instance.SpawnHeros();
-            //     break;
-            // case GameState.SpawnEnemies:
-            //     UnitManager.Instance.SpawnEnemies();
-            //     break;
+            case GameState.SpawnHeros:
+                UnitManager.Instance.SpawnHeros();
+                break;
+            case GameState.SpawnEnemies:
+                UnitManager.Instance.SpawnEnemies();
+                break;
             // case GameState.HerosTurn:
             //     UnitManager.Instance.HerosTurn();
             //     break;
