@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 782770781}
   - component: {fileID: 782770780}
   m_Layer: 5
-  m_Name: Scrollbar
+  m_Name: Scrollbars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
