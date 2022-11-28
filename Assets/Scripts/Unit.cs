@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    public int movementSpeed = 2;
+    public int movementSpeed = 3;
     
 }

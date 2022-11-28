@@ -33,6 +33,9 @@ public class PlayerManager : MonoBehaviour
         if (this.selectedUnit != null)
             this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
 
+        //Clean Movement Tiles before making new
+        MovementManager.Instance.CleanMovementTiles();
+
         // change the selected unit to the new one. 
         this.selectedUnit = unit; 
         this.selectedUnit.GetComponent<NavMeshAgent>().SetDestination(this.selectedUnit.transform.position);
