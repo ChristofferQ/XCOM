@@ -33,6 +33,9 @@ public class PlayerManager : MonoBehaviour
         if (this.selectedUnit != null)
             this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
 
+        //Clean Movement Tiles before making new
+        MovementManager.Instance.CleanMovementTiles();
+
         // change the selected unit to the new one. 
         this.selectedUnit = unit; 
         this.selectedUnit.GetComponent<NavMeshAgent>().SetDestination(this.selectedUnit.transform.position);
@@ -61,8 +64,13 @@ public class PlayerManager : MonoBehaviour
             if(Physics.Raycast(ray, out hit)) {
                 if(hit.collider.tag == "PlayerUnit") {
                     SelectUnit(hit.transform.gameObject);
+                    Debug.Log("Hero Selected");
+                } else if (hit.collider.tag == "EnemyUnit") {
+                    SelectUnit(hit.transform.gameObject);
+                    Debug.Log("Enemy Selected");
+                    
                 } else {
-                    DeselectUnit();
+                DeselectUnit();
                 }
             }
         }     
