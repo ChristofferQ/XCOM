@@ -5,7 +5,7 @@ using UnityEditor.AI;
 
 public class GridManager : MonoBehaviour
 {
-  [SerializeField] private int _width, _height, _depth;
+  [SerializeField] public int _width, _height, _depth;
   [SerializeField] private Tile _tilePrefab;
 
   public static GridManager Instance;
@@ -38,7 +38,7 @@ public class GridManager : MonoBehaviour
     }
     //Add NavMesh
     UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
-    GameManager.Instance.ChangeState(GameState.HerosTurn);// Change to spawnheros    
+    GameManager.Instance.ChangeState(GameState.SpawnHeros);// Change to spawnheros    
   }
 
   public Tile GetTileAtPosition(Vector2 pos) {
