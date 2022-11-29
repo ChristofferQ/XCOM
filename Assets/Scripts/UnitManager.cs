@@ -32,6 +32,9 @@ public class UnitManager : MonoBehaviour
             Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width), 5, Random.Range(0,GridManager.Instance._depth));
             Instantiate(enemiesToSpawn, randomSpawnPosition, Quaternion.identity);
         }  
+        
+        GameManager.Instance.ChangeState(GameState.HerosTurn);
+        Debug.Log(GameManager.Instance.gameState);
     }
 
     public void HerosTurn()
