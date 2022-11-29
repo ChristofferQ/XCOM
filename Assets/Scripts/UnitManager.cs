@@ -40,4 +40,8 @@ public class UnitManager : MonoBehaviour
     public void HerosTurn()
     {
     }
+
+    public void EnemysTurn()
+    {
+    }
 }
