@@ -44,4 +44,12 @@ public class UnitManager : MonoBehaviour
     public void EnemysTurn()
     {
     }
-}
+    
+    public void ActionPoints()
+    {
+        //Get Units actionCount component
+        //Make it do stuff when the unit takes and action ie. move or attack
+        //Make it "callable" in ClickToMove and (upcoming attack script), so we can call it when an action is taken.
+    }
+    
+    }

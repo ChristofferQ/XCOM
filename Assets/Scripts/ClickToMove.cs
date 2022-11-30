@@ -37,7 +37,13 @@ public class ClickToMove : MonoBehaviour
                 Debug.Log("target tile: "+targetTile.transform.position+ " inRange: "+targetTile.inRange);
                 if (targetTile.inRange)
                 {
-                    targetLocation = targetTile.transform.position;
+                    var unit = GetComponent<Unit>();
+                    if(unit.actionCount > 0)
+                    {
+                        targetLocation = targetTile.transform.position;
+                        unit.actionCount--;
+                        Debug.Log(unit.actionCount);
+                    }
 
                 }
     
