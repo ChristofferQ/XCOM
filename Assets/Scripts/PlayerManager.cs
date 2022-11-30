@@ -10,10 +10,17 @@ public class PlayerManager : MonoBehaviour
     public bool isPerformingAction = false;
     public static PlayerManager Instance; 
 
+    private static List<Unit> units = new List<Unit>();
+
     void Awake() 
     {
         Instance = this;
         StopAllUnitsMovement();
+    }
+
+    public static void AddUnit(Unit u) 
+    {
+        units.Add(u);
     }
 
     private void StopAllUnitsMovement()
@@ -79,6 +86,12 @@ public class PlayerManager : MonoBehaviour
             if (Input.GetKeyDown("space")) {
             if (GameManager.Instance.gameState == GameState.HerosTurn) {
                 GameManager.Instance.ChangeState(GameState.EnemysTurn);
+                for(int i = 0; i < units.Count; i++)
+                {
+                    units[i].actionCount = 2;
+                    Debug.Log(units);
+                }
+                //GetComponent<Unit>().actionCount = 2;
                 Debug.Log("Changed from Hero to Enemy turn");
             } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
                 GameManager.Instance.ChangeState(GameState.HerosTurn);
