@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Collections.Generic;
 
 public class UnitManager : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class UnitManager : MonoBehaviour
     public GameObject enemiesToSpawn;
     public int NumberOfEnemies;
     private static List<Tile> OccupiedTiles = new List<Tile>();
-    
+    public List<GameObject> AllUnits = new List<GameObject>();
+    private static List<Tile> OccupiedTiles2 = new List<Tile>();
    
     void Awake()
     {
@@ -87,5 +89,27 @@ public class UnitManager : MonoBehaviour
             tile.unitHighlight.SetActive(false);
         }
         OccupiedTiles.Clear();
+    }
+
+    public void findAllUnits() {
+
+        AllUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
+        AllUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
+        foreach( var element in AllUnits.ToList()) {
+            Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
+            Debug.Log("First check" + tilePos);
+            var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
+            Debug.Log("Second check" + tilePos);
+            OccupiedTiles.Add(unitTile);
+            Debug.Log("Third check" + tilePos);
+            //Debug.Log("AllUnits !!!!!: " + element.ToString());
+            }
+
+            foreach (Tile tile in OccupiedTiles.ToList())
+            {
+                tile.unitHighlight.SetActive(true);
+            }
+
+            
     }
 }
