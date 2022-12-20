@@ -42,6 +42,7 @@ public class PlayerManager : MonoBehaviour
 
         //Clean Movement Tiles before making new
         MovementManager.Instance.CleanMovementTiles();
+        UnitManager.Instance.CleanUnitTiles();
 
         // change the selected unit to the new one. 
         this.selectedUnit = unit; 
@@ -51,6 +52,8 @@ public class PlayerManager : MonoBehaviour
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
         var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
         MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
+        UnitManager.Instance.DisplayUnitPosition(pos);
+        
     }
 
     public void DeselectUnit()
@@ -60,10 +63,13 @@ public class PlayerManager : MonoBehaviour
         this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
         this.selectedUnit = null;
         MovementManager.Instance.CleanMovementTiles();
+        UnitManager.Instance.CleanUnitTiles();
     }
 
     void Update() 
     {
+
+        //Select & Deselect Unit 
         if(Input.GetMouseButtonUp(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

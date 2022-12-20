@@ -21,11 +21,9 @@ public class MovementManager : MonoBehaviour
         //select tiles in range
         List<Tile> area = new List<Tile>();
         area.Add(GridManager.Instance.GetTileAtPosition(pos));
-        Debug.Log(area[0]);
+        Debug.Log(area[0] + "This is start");
         while ( moveCount < movement)
         {
-            
-
             foreach (Tile tile in area.ToList() )
             {
                 //movement BFS
@@ -66,12 +64,8 @@ public class MovementManager : MonoBehaviour
                         nextTile.parent = tile;
                         if (nextTile.dist == -1) nextTile.dist = moveCount +1;
                     }
-
-                    
                     tile.isCheck = true;
                 }
-            
-  
             }
             moveCount++;
         }
