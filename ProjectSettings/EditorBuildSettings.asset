@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/winScreenScene.unity
     guid: 40602ab82edd0d84695e379b40b07f21
+  - enabled: 1
+    path: Assets/Scenes/NewGame.unity
+    guid: b16bfa81b2cdc1642b43c3624c824685
   m_configObjects: {}
