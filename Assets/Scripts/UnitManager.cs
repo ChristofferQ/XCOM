@@ -56,7 +56,7 @@ public class UnitManager : MonoBehaviour
     }
 
     //Used in PlayerManager.cs --> Change this method to keep tabs on all units and the occupied tiles instead of just the currently selected
-    public void DisplayUnitPosition(Vector2 pos) {
+    public void DisplayUnitTile(Vector2 pos) {
         CleanUnitTiles();
         int size = 0;
         OccupiedTiles.Add(GridManager.Instance.GetTileAtPosition(pos));

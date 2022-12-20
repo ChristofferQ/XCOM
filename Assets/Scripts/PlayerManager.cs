@@ -52,7 +52,7 @@ public class PlayerManager : MonoBehaviour
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
         var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
         MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
-        UnitManager.Instance.DisplayUnitPosition(pos);
+        UnitManager.Instance.DisplayUnitTile(pos);
         
     }
 
