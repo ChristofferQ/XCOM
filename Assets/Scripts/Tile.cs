@@ -8,6 +8,8 @@ public class Tile : MonoBehaviour
     [SerializeField] private GameObject _highlight;
     public GameObject rangeHighlight;
     public GameObject unitHighlight;
+    public GameObject PlayerHighlight;
+    public GameObject EnemyHighlight;
     public bool isCheck;
     public int dist; 
     public bool Walkable = true; 
