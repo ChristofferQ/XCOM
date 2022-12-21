@@ -25,7 +25,8 @@ public class ClickToMove : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 Debug.Log(hit.collider.gameObject.name);
-                // Jepser made this, but it doesn't really do anything we wanted, delete it soon^tm
+
+                // Jesper made this, but it doesn't really do anything we wanted, delete it soon^tm
                 //if (navMeshAgent.isStopped = false) return; // Already moving!  
                 
                 var tmp2Dpos = new Vector2(
@@ -35,7 +36,7 @@ public class ClickToMove : MonoBehaviour
                 var targetTile = GridManager.Instance.GetTileAtPosition(tmp2Dpos);
                 
                 Debug.Log("target tile: "+targetTile.transform.position+ " inRange: "+targetTile.inRange);
-                if (targetTile.inRange)
+                if (targetTile.inRange && targetTile.Occupied == false)
                 {
                     var unit = GetComponent<Unit>();
                     if(unit.actionCount > 0)

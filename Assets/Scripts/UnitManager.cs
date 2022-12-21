@@ -86,12 +86,14 @@ public class UnitManager : MonoBehaviour
 
     //Used in PlayerManager.cs & ClickToMove.cs --> Change this method to keep tabs on all units and the occupied tiles instead of just the currently selected
     public void CleanUnitTiles() {
-        
+
         foreach (Tile tile in OccupiedTiles) {
             tile.EnemyHighlight.SetActive(false);
+            tile.Occupied = false;
         }
         foreach (Tile tile in OccupiedTiles2) {
             tile.PlayerHighlight.SetActive(false);
+            tile.Occupied = false;
         }
         OccupiedTiles.Clear();
         OccupiedTiles2.Clear();
@@ -110,6 +112,7 @@ public class UnitManager : MonoBehaviour
         foreach (Tile tile in OccupiedTiles.ToList())
             {
                 tile.EnemyHighlight.SetActive(true);
+                tile.Occupied = true;
             }
         PlayerUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
         foreach( var element in PlayerUnits.ToList()) {
@@ -121,6 +124,7 @@ public class UnitManager : MonoBehaviour
          foreach (Tile tile in OccupiedTiles2.ToList())
             {
                 tile.PlayerHighlight.SetActive(true);
+                tile.Occupied = true;
             }
 
 
