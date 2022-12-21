@@ -11,6 +11,7 @@ public class Tile : MonoBehaviour
     public bool isCheck;
     public int dist; 
     public bool Walkable = true; 
+    public bool Occupied = false;
     public Tile parent; 
     public bool inRange;
     
