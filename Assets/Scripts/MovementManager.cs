@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-
 using UnityEngine;
 
 public class MovementManager : MonoBehaviour
 {
-
     public static MovementManager Instance;
 
     void Start()

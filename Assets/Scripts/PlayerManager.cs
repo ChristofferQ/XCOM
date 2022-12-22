@@ -43,6 +43,7 @@ public class PlayerManager : MonoBehaviour
         //Clean Movement Tiles before making new
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
+        CombatManager.Instance.CleanCombatTiles();
 
         // change the selected unit to the new one. 
         this.selectedUnit = unit; 
@@ -52,10 +53,10 @@ public class PlayerManager : MonoBehaviour
         showStatsBar(unit);
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
         var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
-        MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
-        //UnitManager.Instance.DisplayUnitTile(pos);
-        UnitManager.Instance.findAllUnits();
         
+        MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
+        UnitManager.Instance.findAllUnits();
+        //UnitManager.Instance.DisplayUnitTile(pos);
     }
 
     public void DeselectUnit()
@@ -66,6 +67,17 @@ public class PlayerManager : MonoBehaviour
         this.selectedUnit = null;
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
+        CombatManager.Instance.CleanCombatTiles();
+    }
+
+    public void performCombat() 
+    {
+        if (!this.selectedUnit) return;
+        
+        var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
+        var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
+        MovementManager.Instance.CleanMovementTiles();
+        CombatManager.Instance.SetCombatTiles(pos, attackRange);
     }
 
     void Update() 
@@ -90,17 +102,17 @@ public class PlayerManager : MonoBehaviour
             }
         }  
 
-            //Simple way to change players in testing, should be rewritten/changed later.
-            if (Input.GetKeyDown("space")) {
-            if (GameManager.Instance.gameState == GameState.HerosTurn) {
-                GameManager.Instance.ChangeState(GameState.EnemysTurn);
-                for(int i = 0; i < units.Count; i++)
-                {
-                    units[i].actionCount = 2;
-                    Debug.Log(units);
-                }
-                //GetComponent<Unit>().actionCount = 2;
-                Debug.Log("Changed from Hero to Enemy turn");
+        //Simple way to change players in testing, should be rewritten/changed later.
+        if (Input.GetKeyDown("space")) {
+        if (GameManager.Instance.gameState == GameState.HerosTurn) {
+            GameManager.Instance.ChangeState(GameState.EnemysTurn);
+            for(int i = 0; i < units.Count; i++)
+            {
+                units[i].actionCount = 2;
+                Debug.Log(units);
+            }
+            //GetComponent<Unit>().actionCount = 2;
+            Debug.Log("Changed from Hero to Enemy turn");
             } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
                 GameManager.Instance.ChangeState(GameState.HerosTurn);
                 Debug.Log("Changed from Enemy to Hero turn");
@@ -108,7 +120,16 @@ public class PlayerManager : MonoBehaviour
                 return;
             }
             
-        }       
+        }    
+
+        if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
+            performCombat();
+            Debug.Log(CombatManager.Instance.inCombat);
+            CombatManager.Instance.inCombat = true;
+            Debug.Log(CombatManager.Instance.inCombat);
+        }
+
+
     }
     public void showStatsBar(GameObject unit)
     {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using System.Collections.Generic;
 
 public class UnitManager : MonoBehaviour
 {
@@ -14,6 +13,8 @@ public class UnitManager : MonoBehaviour
     public int NumberOfEnemies;
     private static List<Tile> OccupiedTiles = new List<Tile>();
     public List<GameObject> AllUnits = new List<GameObject>();
+    public List<GameObject> PlayerUnits = new List<GameObject>();
+    public List<GameObject> EnemyUnits = new List<GameObject>();
     private static List<Tile> OccupiedTiles2 = new List<Tile>();
     public GameObject unit;
     public Transform meeple;
@@ -89,13 +90,51 @@ public class UnitManager : MonoBehaviour
 
     //Used in PlayerManager.cs & ClickToMove.cs --> Change this method to keep tabs on all units and the occupied tiles instead of just the currently selected
     public void CleanUnitTiles() {
+
         foreach (Tile tile in OccupiedTiles) {
-            tile.unitHighlight.SetActive(false);
+            tile.EnemyHighlight.SetActive(false);
+            tile.Occupied = false;
+        }
+        foreach (Tile tile in OccupiedTiles2) {
+            tile.PlayerHighlight.SetActive(false);
+            tile.Occupied = false;
         }
         OccupiedTiles.Clear();
+        OccupiedTiles2.Clear();
     }
 
     public void findAllUnits() {
+
+        EnemyUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
+        foreach( var element in EnemyUnits.ToList()) {
+            Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
+            var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
+            OccupiedTiles.Add(unitTile);
+            Debug.Log("EnemyUnits: " + element.ToString());
+            //Debug.Log("AllUnits !!!!!: " + element.ToString());
+        }
+        foreach (Tile tile in OccupiedTiles.ToList())
+            {
+                tile.EnemyHighlight.SetActive(true);
+                tile.Occupied = true;
+            }
+        PlayerUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
+        foreach( var element in PlayerUnits.ToList()) {
+            Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
+            var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
+            OccupiedTiles2.Add(unitTile);
+            Debug.Log("PlayerUnits: " + element.ToString());
+        }
+         foreach (Tile tile in OccupiedTiles2.ToList())
+            {
+                tile.PlayerHighlight.SetActive(true);
+                tile.Occupied = true;
+            }
+
+
+        /* Used to find all units and hightlight their corresponding tiles
+
+        public void findAllUnits() {
 
         AllUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
         AllUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
@@ -107,13 +146,12 @@ public class UnitManager : MonoBehaviour
             OccupiedTiles.Add(unitTile);
             Debug.Log("Third check" + tilePos);
             //Debug.Log("AllUnits !!!!!: " + element.ToString());
-            }
-
-            foreach (Tile tile in OccupiedTiles.ToList())
-            {
+        }
+        foreach (Tile tile in OccupiedTiles.ToList()) {
                 tile.unitHighlight.SetActive(true);
             }
 
+        */
             
     }
 }
