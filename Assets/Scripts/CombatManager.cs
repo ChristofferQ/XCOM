@@ -12,6 +12,11 @@ public class CombatManager : MonoBehaviour
         Instance = this; 
     }
 
+    void Update() 
+    {
+        
+    }
+
     public void SetCombatTiles(Vector2 pos, int attack)
     {
         Dictionary<Vector2, Tile> tiles = GridManager.Instance._tiles;
@@ -62,7 +67,7 @@ public class CombatManager : MonoBehaviour
                         nextTile.parent = tile;
                         if (nextTile.dist == -1) nextTile.dist = attackCount +1;
                     }
-                    tile.isCheck = true;
+
                     }
 
                     if (GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x + 1, tilePos.y + 1)) != null && GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x + 1, tilePos.y + 1)).isCheck == false)
@@ -104,7 +109,7 @@ public class CombatManager : MonoBehaviour
         {
             if (tile.Walkable == true && tile.Occupied == false)
             {
-                //tile.inRange = true;
+                
                 tile.unitHighlight.SetActive(true);
 
                 //tile.isCheck = true;
@@ -112,6 +117,7 @@ public class CombatManager : MonoBehaviour
 
             if (tile.Occupied == true)
             {
+                tile.inAttackRange = true;
                 tile.CombatHightlight.SetActive(true);
             }
         }
@@ -124,7 +130,7 @@ public class CombatManager : MonoBehaviour
         //makes tiles inRange false
         foreach (Tile tile in tiles.Values)
         {
-            tile.inRange = false;
+            tile.inAttackRange = false;
             tile.unitHighlight.SetActive(false);
             tile.CombatHightlight.SetActive(false);
 

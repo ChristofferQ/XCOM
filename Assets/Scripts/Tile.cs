@@ -17,6 +17,7 @@ public class Tile : MonoBehaviour
     public bool Occupied = false;
     public Tile parent; 
     public bool inRange;
+    public bool inAttackRange;
     
 
 
