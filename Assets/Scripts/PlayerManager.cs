@@ -79,6 +79,9 @@ public class PlayerManager : MonoBehaviour
         var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
         MovementManager.Instance.CleanMovementTiles();
         CombatManager.Instance.SetCombatTiles(pos, attackRange);
+        Debug.Log(CombatManager.Instance.inCombat);
+        CombatManager.Instance.inCombat = true;
+        Debug.Log(CombatManager.Instance.inCombat);
     }
 
     void Update() 
@@ -125,9 +128,9 @@ public class PlayerManager : MonoBehaviour
 
         if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
             performCombat();
-            Debug.Log(CombatManager.Instance.inCombat);
-            CombatManager.Instance.inCombat = true;
-            Debug.Log(CombatManager.Instance.inCombat);
+            //Debug.Log(CombatManager.Instance.inCombat);
+            //CombatManager.Instance.inCombat = true;
+            //Debug.Log(CombatManager.Instance.inCombat);
         }
 
 
