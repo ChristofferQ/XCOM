@@ -6,6 +6,7 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
+    public bool inCombat = false;
 
     void Start() 
     {
@@ -14,7 +15,7 @@ public class CombatManager : MonoBehaviour
 
     void Update() 
     {
-        
+
     }
 
     public void SetCombatTiles(Vector2 pos, int attack)
@@ -137,6 +138,8 @@ public class CombatManager : MonoBehaviour
             tile.isCheck = false;
             tile.parent = tile;
             tile.dist = -1;
+
+            inCombat = false;
         }
 
     }
