@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -14,6 +15,9 @@ public class UnitManager : MonoBehaviour
     private static List<Tile> OccupiedTiles = new List<Tile>();
     public List<GameObject> AllUnits = new List<GameObject>();
     private static List<Tile> OccupiedTiles2 = new List<Tile>();
+    public GameObject unit;
+    public Transform meeple;
+    public List<GameObject> allBar = new List<GameObject>();
    
     void Awake()
     {

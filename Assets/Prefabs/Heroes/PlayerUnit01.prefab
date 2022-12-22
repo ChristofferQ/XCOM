@@ -154,8 +154,9 @@ MonoBehaviour:
   actions:
   - {fileID: 8560437856479815547}
   - {fileID: 3567530286944333785}
-  fullAction: {fileID: 21300000, guid: b6883d59021fb774ea70bbe5337eae7b, type: 3}
-  emptyAction: {fileID: 21300000, guid: d421d44df68c79b43b8336c1ea499baf, type: 3}
+  fullAction: {fileID: 21300000, guid: 86831b615108e464984965509d5de9fd, type: 3}
+  emptyAction: {fileID: 21300000, guid: 8fad95bc70fdc2f46a0c7981132aa58e, type: 3}
+  stats: {fileID: 8088716564796902236, guid: 17d71330467641949af7069e93b060fe, type: 3}
 --- !u!1001 &996305796865405727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4251827143654275855, guid: 17d71330467641949af7069e93b060fe, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5073444721850439553, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_Name
       value: Stats
@@ -278,6 +283,10 @@ PrefabInstance:
     - target: {fileID: 6268078123488191221, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 112.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088716564796902236, guid: 17d71330467641949af7069e93b060fe, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8316535647955983681, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_Enabled
@@ -297,10 +306,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871913385027572859, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 73.995735
+      value: 43
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7568014321628446700, guid: 17d71330467641949af7069e93b060fe, type: 3}
     - {fileID: 8316535647955983681, guid: 17d71330467641949af7069e93b060fe, type: 3}
     - {fileID: 3788716340666176750, guid: 17d71330467641949af7069e93b060fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17d71330467641949af7069e93b060fe, type: 3}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Unit : MonoBehaviour
 {
@@ -12,10 +13,15 @@ public class Unit : MonoBehaviour
     public Image[] actions;
     public Sprite fullAction;
     public Sprite emptyAction; 
+
+    [SerializeField] public CanvasGroup stats;
+
     
     void Start() 
     {
         PlayerManager.AddUnit(this); 
+
+        stats.alpha = 1f;
     }
 
     void Update(){

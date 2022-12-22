@@ -49,6 +49,7 @@ public class PlayerManager : MonoBehaviour
         this.selectedUnit.GetComponent<NavMeshAgent>().SetDestination(this.selectedUnit.transform.position);
         this.selectedUnit.GetComponent<ClickToMove>().enabled = true;
 
+        showStatsBar(unit);
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
         var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
         MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
@@ -108,5 +109,12 @@ public class PlayerManager : MonoBehaviour
             }
             
         }       
+    }
+    public void showStatsBar(GameObject unit)
+    {
+        if (!this.selectedUnit) return;
+        
+        var test = this.selectedUnit.GetComponent<Unit>();
+        test.stats.alpha = 1.0f;
     }
 }
