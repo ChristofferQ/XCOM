@@ -68,6 +68,7 @@ public class PlayerManager : MonoBehaviour
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
         CombatManager.Instance.CleanCombatTiles();
+
     }
 
     public void performCombat() 
@@ -137,5 +138,6 @@ public class PlayerManager : MonoBehaviour
         
         var test = this.selectedUnit.GetComponent<Unit>();
         test.stats.alpha = 1.0f;
+        
     }
 }

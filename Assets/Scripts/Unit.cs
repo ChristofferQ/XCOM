@@ -22,7 +22,7 @@ public class Unit : MonoBehaviour
     {
         PlayerManager.AddUnit(this); 
 
-        stats.alpha = 1f;
+        stats.alpha = 0f;
     }
 
     void Update(){
