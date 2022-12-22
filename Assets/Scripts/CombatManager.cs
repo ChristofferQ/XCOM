@@ -15,6 +15,17 @@ public class CombatManager : MonoBehaviour
 
     void Update() 
     {
+/*         if (Input.GetMouseButtonDown(1) && (inCombat == true))
+        {
+            Debug.Log("AAARGHGHGH TESTTSS");
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            {
+                var attackedUnit = GetComponent<Unit>();
+            }
+
+            //Lav en bool til unit der siger attackable eller noget ligesom med tiles, da vi gerne vil klikke på unit
+
+        } */
 
     }
 
