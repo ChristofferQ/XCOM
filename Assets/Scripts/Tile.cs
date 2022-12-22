@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
     public GameObject unitHighlight;
     public GameObject PlayerHighlight;
     public GameObject EnemyHighlight;
+    public GameObject CombatHightlight;
     public bool isCheck;
     public int dist; 
     public bool Walkable = true; 

@@ -50,6 +50,7 @@ public class ClickToMove : MonoBehaviour
     
                 MovementManager.Instance.CleanMovementTiles();
                 UnitManager.Instance.CleanUnitTiles();
+                CombatManager.Instance.CleanCombatTiles();
 
             }
         }

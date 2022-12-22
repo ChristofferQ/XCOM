@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  attackRange: 1
   actionCount: 2
   numOfActions: 2
   actions:

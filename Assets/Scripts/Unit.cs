@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Unit : MonoBehaviour
 {
     public int movementSpeed = 3;
+    public int attackRange;
     public int actionCount = 2;
     public int numOfActions;
 
