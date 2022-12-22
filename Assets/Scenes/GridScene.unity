@@ -586,6 +586,7 @@ GameObject:
   - component: {fileID: 271189275}
   - component: {fileID: 271189274}
   - component: {fileID: 271189273}
+  - component: {fileID: 271189276}
   m_Layer: 5
   m_Name: HudMenu
   m_TagString: Untagged
@@ -681,6 +682,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271189271}
   m_CullTransparentMesh: 1
+--- !u!114 &271189276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271189271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d50b8e6c2defb4ab26016bf9498f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &415910918
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571996698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 271189276}
+        m_TargetAssemblyTypeName: HudMenu, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571996698
 MonoBehaviour:
   m_ObjectHideFlags: 0
