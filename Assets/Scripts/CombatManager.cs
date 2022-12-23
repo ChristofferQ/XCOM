@@ -15,8 +15,9 @@ public class CombatManager : MonoBehaviour
 
     void Update() 
     {
-/*         if (Input.GetMouseButtonDown(1) && (inCombat == true))
+         if (Input.GetMouseButtonDown(1) && (inCombat == true))
         {
+            RaycastHit hit;
             Debug.Log("AAARGHGHGH TESTTSS");
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
@@ -25,7 +26,10 @@ public class CombatManager : MonoBehaviour
 
             //Lav en bool til unit der siger attackable eller noget ligesom med tiles, da vi gerne vil klikke på unit
 
-        } */
+            // Check Physics Overlap for at checke colliders indenfor .... ---> Du har lagt en box collider på Units. 
+            // https://www.youtube.com/watch?v=h9oEhVqGptU&t=1s
+
+        } 
 
     }
 
