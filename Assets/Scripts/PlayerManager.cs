@@ -77,6 +77,7 @@ public class PlayerManager : MonoBehaviour
         var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
         MovementManager.Instance.CleanMovementTiles();
         CombatManager.Instance.SetCombatTiles(pos, attackRange);
+        CombatManager.Instance.inCombat = true;
 
         var radius = 1;
         var center = selectedUnit.transform.position;

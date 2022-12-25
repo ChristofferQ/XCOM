@@ -65,7 +65,7 @@ public class Unit : MonoBehaviour
             }
         }
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
 
         if (currentShield == 0 && currentHealth > 0)

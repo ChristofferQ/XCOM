@@ -6,10 +6,26 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
+    public bool inCombat = false;
 
     void Start() 
     {
         Instance = this; 
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) && (inCombat == true))
+            {
+                Debug.Log("You have attacked: " + hit.collider.gameObject.name);
+
+                //This line gives and error when rightclicking the tile under a unit
+                hit.collider.gameObject.GetComponent<Unit>().TakeDamage(1);
+            }
+        }
     }
 
     public void SetCombatTiles(Vector2 pos, int attack)
@@ -118,6 +134,9 @@ public class CombatManager : MonoBehaviour
     public void CleanCombatTiles()
     {
         Dictionary<Vector2, Tile> tiles = GridManager.Instance._tiles;
+
+        //Disable combat mode
+        inCombat = false;
 
         //makes tiles inRange false
         foreach (Tile tile in tiles.Values)
