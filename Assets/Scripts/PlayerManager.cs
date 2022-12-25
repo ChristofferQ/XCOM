@@ -7,7 +7,6 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private GameObject selectedUnit = null; 
     [SerializeField] private List<GameObject> OwnedUnits = new List<GameObject>(); 
-    public bool isPerformingAction = false;
     public static PlayerManager Instance; 
 
     private static List<Unit> units = new List<Unit>();
@@ -34,7 +33,6 @@ public class PlayerManager : MonoBehaviour
     private void SelectUnit(GameObject unit) 
     {
         if (!unit) return; 
-        if (isPerformingAction) return;
 
         // disable ClickToMove script on current selectedUnit
         if (this.selectedUnit != null)
@@ -79,11 +77,20 @@ public class PlayerManager : MonoBehaviour
         var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
         MovementManager.Instance.CleanMovementTiles();
         CombatManager.Instance.SetCombatTiles(pos, attackRange);
+
+        var radius = 1;
+        var center = selectedUnit.transform.position;
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach(var hitCollider in hitColliders)
+        {
+            Debug.Log("You have found me!");
+            Debug.Log("Hero: " + hitCollider.name);
+            hitCollider.GetComponent<Unit>().inCombatRange = true;
+        }
     }
 
     void Update() 
     {
-
         //Select & Deselect Unit 
         if(Input.GetMouseButtonUp(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -124,7 +131,6 @@ public class PlayerManager : MonoBehaviour
             } else {
                 return;
             }
-            
         }    
 
         if(Input.GetKeyDown("g") && (this.selectedUnit != null)) 
@@ -140,6 +146,5 @@ public class PlayerManager : MonoBehaviour
         
         var test = this.selectedUnit.GetComponent<Unit>();
         test.stats.alpha = 1.0f;
-        
     }
 }

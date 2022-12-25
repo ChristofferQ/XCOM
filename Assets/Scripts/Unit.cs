@@ -21,6 +21,7 @@ public class Unit : MonoBehaviour
     public Sprite emptyAction; 
 
     [SerializeField] public CanvasGroup stats;
+    public bool inCombatRange = false;
 
     
     void Start() 

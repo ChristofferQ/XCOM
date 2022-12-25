@@ -30,7 +30,9 @@ public class UnitManager : MonoBehaviour
         for (int x = 0; x < NumberOfHeros; x++)
         {
             Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width), 5, Random.Range(0, 5));
-            Instantiate(herosToSpawn, randomSpawnPosition, Quaternion.identity);
+            var Hero = Instantiate(herosToSpawn, randomSpawnPosition, Quaternion.identity);
+            Hero.name = $"Hero {x}";
+            //spawnedTile.name = $"Tile {x} {y} {z}";
         }  
         GameManager.Instance.ChangeState(GameState.SpawnEnemies);
     }
