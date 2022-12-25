@@ -135,6 +135,28 @@ public class PlayerManager : MonoBehaviour
 
 
     }
+
+    public void end()
+    {
+        if (GameManager.Instance.gameState == GameState.HerosTurn) {
+            GameManager.Instance.ChangeState(GameState.EnemysTurn);
+            for(int i = 0; i < units.Count; i++)
+            {
+                units[i].actionCount = 2;
+                Debug.Log(units);
+            }
+            //GetComponent<Unit>().actionCount = 2;
+            Debug.Log("Changed from Hero to Enemy turn");
+            } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
+                GameManager.Instance.ChangeState(GameState.HerosTurn);
+                Debug.Log("Changed from Enemy to Hero turn");
+            } else {
+                return;
+            }
+            
+    } 
+    
+    
     public void showStatsBar(GameObject unit)
     {
         if (!this.selectedUnit) return;

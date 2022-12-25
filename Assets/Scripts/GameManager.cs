@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameState gameState;
+    public GameObject theButton;
 
     void Awake()
     {
@@ -34,9 +36,11 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.HerosTurn:
                 UnitManager.Instance.HerosTurn();
+                theButton.GetComponent<Image>().color = Color.green;
                 break;
             case GameState.EnemysTurn:
                 UnitManager.Instance.EnemysTurn();
+                theButton.GetComponent<Image>().color = Color.red;
                 break;
         }
     }
