@@ -79,9 +79,6 @@ public class PlayerManager : MonoBehaviour
         var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
         MovementManager.Instance.CleanMovementTiles();
         CombatManager.Instance.SetCombatTiles(pos, attackRange);
-        Debug.Log(CombatManager.Instance.inCombat);
-        CombatManager.Instance.inCombat = true;
-        Debug.Log(CombatManager.Instance.inCombat);
     }
 
     void Update() 
@@ -113,24 +110,26 @@ public class PlayerManager : MonoBehaviour
             for(int i = 0; i < units.Count; i++)
             {
                 units[i].actionCount = 2;
-                Debug.Log(units);
             }
-            //GetComponent<Unit>().actionCount = 2;
             Debug.Log("Changed from Hero to Enemy turn");
+            
             } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
                 GameManager.Instance.ChangeState(GameState.HerosTurn);
+                for(int i = 0; i < units.Count; i++)
+                {
+                units[i].actionCount = 2;
+                }
                 Debug.Log("Changed from Enemy to Hero turn");
+
             } else {
                 return;
             }
             
         }    
 
-        if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
+        if(Input.GetKeyDown("g") && (this.selectedUnit != null)) 
+        {
             performCombat();
-            //Debug.Log(CombatManager.Instance.inCombat);
-            //CombatManager.Instance.inCombat = true;
-            //Debug.Log(CombatManager.Instance.inCombat);
         }
 
 

@@ -6,31 +6,10 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
-    public bool inCombat = false;
 
     void Start() 
     {
         Instance = this; 
-    }
-
-    void Update() 
-    {
-         if (Input.GetMouseButtonDown(1) && (inCombat == true))
-        {
-            RaycastHit hit;
-            Debug.Log("AAARGHGHGH TESTTSS");
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
-            {
-                var attackedUnit = GetComponent<Unit>();
-            }
-
-            //Lav en bool til unit der siger attackable eller noget ligesom med tiles, da vi gerne vil klikke på unit
-
-            // Check Physics Overlap for at checke colliders indenfor .... ---> Du har lagt en box collider på Units. 
-            // https://www.youtube.com/watch?v=h9oEhVqGptU&t=1s
-
-        } 
-
     }
 
     public void SetCombatTiles(Vector2 pos, int attack)
@@ -120,15 +99,12 @@ public class CombatManager : MonoBehaviour
             }
             attackCount++;
         }
-        //makes tiles inRange true
+        //Add highlights to tiles depending on occupied or not
         foreach (Tile tile in area.ToList())
         {
             if (tile.Walkable == true && tile.Occupied == false)
             {
-                
                 tile.unitHighlight.SetActive(true);
-
-                //tile.isCheck = true;
             }
 
             if (tile.Occupied == true)
@@ -153,10 +129,6 @@ public class CombatManager : MonoBehaviour
             tile.isCheck = false;
             tile.parent = tile;
             tile.dist = -1;
-
-            inCombat = false;
         }
-
     }
-
 }
