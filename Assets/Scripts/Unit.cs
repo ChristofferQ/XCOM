@@ -24,6 +24,7 @@ public class Unit : MonoBehaviour
     public Sprite emptyAction; 
 
     [SerializeField] public CanvasGroup stats;
+    public bool inCombatRange = false;
 
     
     void Start() 
@@ -67,7 +68,7 @@ public class Unit : MonoBehaviour
             }
         }
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
 
         if (currentShield == 0 && currentHealth > 0)

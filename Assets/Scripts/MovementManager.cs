@@ -19,7 +19,7 @@ public class MovementManager : MonoBehaviour
         //select tiles in range
         List<Tile> area = new List<Tile>();
         area.Add(GridManager.Instance.GetTileAtPosition(pos));
-        Debug.Log(area[0] + "This is start");
+        //Debug.Log(area[0] + "This is start");
         while ( moveCount < movement)
         {
             foreach (Tile tile in area.ToList() )

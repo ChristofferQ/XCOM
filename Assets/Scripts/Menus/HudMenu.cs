@@ -12,7 +12,7 @@ public class HudMenu : MonoBehaviour
 
     public void Attack()
    {
-        PlayerManager.Instance.performCombat();
+        CombatManager.Instance.performCombat();
    }
 
    public void endTurn()

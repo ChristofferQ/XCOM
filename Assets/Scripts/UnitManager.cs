@@ -27,7 +27,9 @@ public class UnitManager : MonoBehaviour
         for (int x = 0; x < NumberOfHeros; x++)
         {
             Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width), 5, Random.Range(0, 5));
-            Instantiate(herosToSpawn, randomSpawnPosition, Quaternion.identity);
+            var Hero = Instantiate(herosToSpawn, randomSpawnPosition, Quaternion.identity);
+            Hero.name = $"Hero {x}";
+            //spawnedTile.name = $"Tile {x} {y} {z}";
         }  
         GameManager.Instance.ChangeState(GameState.SpawnEnemies);
     }
@@ -107,7 +109,7 @@ public class UnitManager : MonoBehaviour
             Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
             OccupiedTiles.Add(unitTile);
-            Debug.Log("EnemyUnits: " + element.ToString());
+            //Debug.Log("EnemyUnits: " + element.ToString());
             //Debug.Log("AllUnits !!!!!: " + element.ToString());
         }
         foreach (Tile tile in OccupiedTiles.ToList())
@@ -120,7 +122,7 @@ public class UnitManager : MonoBehaviour
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
             OccupiedTiles2.Add(unitTile);
-            Debug.Log("PlayerUnits: " + element.ToString());
+            //Debug.Log("PlayerUnits: " + element.ToString());
         }
          foreach (Tile tile in OccupiedTiles2.ToList())
             {

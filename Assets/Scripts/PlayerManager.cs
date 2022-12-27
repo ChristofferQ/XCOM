@@ -5,11 +5,9 @@ using UnityEngine.AI;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] private GameObject selectedUnit = null; 
+    [SerializeField] public GameObject selectedUnit = null; 
     [SerializeField] private List<GameObject> OwnedUnits = new List<GameObject>(); 
-    public bool isPerformingAction = false;
-    public static PlayerManager Instance;
-
+    public static PlayerManager Instance; 
 
     private static List<Unit> units = new List<Unit>();
 
@@ -35,7 +33,6 @@ public class PlayerManager : MonoBehaviour
     private void SelectUnit(GameObject unit) 
     {
         if (!unit) return; 
-        if (isPerformingAction) return;
 
         // disable ClickToMove script on current selectedUnit
         if (this.selectedUnit != null)
@@ -72,22 +69,8 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    public void performCombat() 
-    {
-        if (!this.selectedUnit) return;
-        
-        var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
-        var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
-        MovementManager.Instance.CleanMovementTiles();
-        CombatManager.Instance.SetCombatTiles(pos, attackRange);
-        Debug.Log(CombatManager.Instance.inCombat);
-        CombatManager.Instance.inCombat = true;
-        Debug.Log(CombatManager.Instance.inCombat);
-    }
-
     void Update() 
     {
-
         //Select & Deselect Unit 
         if(Input.GetMouseButtonUp(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -115,7 +98,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
-            performCombat();
+            CombatManager.Instance.performCombat();
             //Debug.Log(CombatManager.Instance.inCombat);
             //CombatManager.Instance.inCombat = true;
             //Debug.Log(CombatManager.Instance.inCombat);
@@ -132,10 +115,9 @@ public class PlayerManager : MonoBehaviour
             for(int i = 0; i < units.Count; i++)
             {
                 units[i].actionCount = 2;
-                Debug.Log(units);
             }
-            //GetComponent<Unit>().actionCount = 2;
             Debug.Log("Changed from Hero to Enemy turn");
+            
             } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
                 GameManager.Instance.ChangeState(GameState.HerosTurn);
                 Timer.Instance.ResetTimer();
@@ -148,9 +130,7 @@ public class PlayerManager : MonoBehaviour
             } else {
                 return;
             }
-           
-    } 
-    
+        }    
     
     public void showStatsBar(GameObject unit)
     {
@@ -158,6 +138,5 @@ public class PlayerManager : MonoBehaviour
         
         var test = this.selectedUnit.GetComponent<Unit>();
         test.stats.alpha = 1.0f;
-        
     }
 }
