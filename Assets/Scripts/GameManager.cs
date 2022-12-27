@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState gameState;
     public GameObject theButton;
+    public GameObject theBackground;
 
     void Awake()
     {
@@ -37,10 +38,12 @@ public class GameManager : MonoBehaviour
             case GameState.HerosTurn:
                 UnitManager.Instance.HerosTurn();
                 theButton.GetComponent<Image>().color = Color.green;
+                theBackground.GetComponent<Image>().color = Color.green;
                 break;
             case GameState.EnemysTurn:
                 UnitManager.Instance.EnemysTurn();
                 theButton.GetComponent<Image>().color = Color.red;
+                theBackground.GetComponent<Image>().color = Color.red;
                 break;
         }
     }
