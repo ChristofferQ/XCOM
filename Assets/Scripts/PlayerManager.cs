@@ -69,27 +69,6 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    public void performCombat() 
-    {
-        if (!this.selectedUnit) return;
-        
-        var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
-        var attackRange = this.selectedUnit.GetComponent<Unit>().attackRange;
-        MovementManager.Instance.CleanMovementTiles();
-        CombatManager.Instance.SetCombatTiles(pos, attackRange);
-        CombatManager.Instance.inCombat = true;
-
-        var radius = 1;
-        var center = selectedUnit.transform.position;
-        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-        foreach(var hitCollider in hitColliders)
-        {
-            //Debug.Log("You have found me!");
-            //Debug.Log("Hero: " + hitCollider.name);
-            hitCollider.GetComponent<Unit>().inCombatRange = true;
-        }
-    }
-
     void Update() 
     {
         //Select & Deselect Unit 
@@ -119,7 +98,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
-            performCombat();
+            CombatManager.Instance.performCombat();
             //Debug.Log(CombatManager.Instance.inCombat);
             //CombatManager.Instance.inCombat = true;
             //Debug.Log(CombatManager.Instance.inCombat);

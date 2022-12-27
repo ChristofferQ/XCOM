@@ -37,6 +37,28 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+        public void performCombat() 
+    {
+        var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
+        if (!unit) return;
+        
+        var pos = GridManager.Instance.GetCoordinateFromWorldPos(unit.transform.position);
+        var attackRange = unit.attackRange;
+        MovementManager.Instance.CleanMovementTiles();
+        CombatManager.Instance.SetCombatTiles(pos, attackRange);
+        CombatManager.Instance.inCombat = true;
+
+        var radius = 1;
+        var center = unit.transform.position;
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach(var hitCollider in hitColliders)
+        {
+            //Debug.Log("You have found me!");
+            //Debug.Log("Hero: " + hitCollider.name);
+            hitCollider.GetComponent<Unit>().inCombatRange = true;
+        }
+    }
+
     public void SetCombatTiles(Vector2 pos, int attack)
     {
         Dictionary<Vector2, Tile> tiles = GridManager.Instance._tiles;
