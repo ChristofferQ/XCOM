@@ -111,8 +111,25 @@ public class PlayerManager : MonoBehaviour
             }
         }  
 
+
         //Simple way to change players in testing, should be rewritten/changed later.
-        if (Input.GetKeyDown("space")) {
+        if (Input.GetKeyDown("space")) 
+        {
+            end();
+        }
+
+        if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
+            performCombat();
+            //Debug.Log(CombatManager.Instance.inCombat);
+            //CombatManager.Instance.inCombat = true;
+            //Debug.Log(CombatManager.Instance.inCombat);
+        }
+
+
+    }
+
+    public void end()
+    {
         if (GameManager.Instance.gameState == GameState.HerosTurn) {
             GameManager.Instance.ChangeState(GameState.EnemysTurn);
             for(int i = 0; i < units.Count; i++)
@@ -133,14 +150,7 @@ public class PlayerManager : MonoBehaviour
                 return;
             }
         }    
-
-        if(Input.GetKeyDown("g") && (this.selectedUnit != null)) 
-        {
-            performCombat();
-        }
-
-
-    }
+    
     public void showStatsBar(GameObject unit)
     {
         if (!this.selectedUnit) return;
