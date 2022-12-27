@@ -23,7 +23,9 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("You have attacked: " + hit.collider.gameObject.name);
 
                 //This line gives and error when rightclicking the tile under a unit
-                hit.collider.gameObject.GetComponent<Unit>().TakeDamage(1);
+                hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+            } else {
+                Debug.Log("No Target!");
             }
         }
     }
