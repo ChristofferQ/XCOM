@@ -41,21 +41,26 @@ public class CombatManager : MonoBehaviour
     {
         var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
         if (!unit) return;
-        
-        var pos = GridManager.Instance.GetCoordinateFromWorldPos(unit.transform.position);
-        var attackRange = unit.attackRange;
-        MovementManager.Instance.CleanMovementTiles();
-        CombatManager.Instance.SetCombatTiles(pos, attackRange);
-        CombatManager.Instance.inCombat = true;
 
-        var radius = 1;
-        var center = unit.transform.position;
-        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-        foreach(var hitCollider in hitColliders)
-        {
-            //Debug.Log("You have found me!");
-            //Debug.Log("Hero: " + hitCollider.name);
-            hitCollider.GetComponent<Unit>().inCombatRange = true;
+        if (unit.actionCount > 0)
+        { 
+            var pos = GridManager.Instance.GetCoordinateFromWorldPos(unit.transform.position);
+            var attackRange = unit.attackRange;
+            MovementManager.Instance.CleanMovementTiles();
+            CombatManager.Instance.SetCombatTiles(pos, attackRange);
+            CombatManager.Instance.inCombat = true;
+
+            var radius = 1;
+            var center = unit.transform.position;
+            Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+            foreach(var hitCollider in hitColliders)
+            {
+                //Debug.Log("You have found me!");
+                //Debug.Log("Hero: " + hitCollider.name);
+                hitCollider.GetComponent<Unit>().inCombatRange = true;
+            }
+        } else {
+            Debug.Log("Out of actions");
         }
     }
 
