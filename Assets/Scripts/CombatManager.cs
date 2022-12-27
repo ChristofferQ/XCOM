@@ -20,10 +20,15 @@ public class CombatManager : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) && (inCombat == true))
             {
-                Debug.Log("You have attacked: " + hit.collider.gameObject.name);
+                if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) )
+                {
+                    Debug.Log("You have attacked: " + hit.collider.gameObject.name);
+                    hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
 
-                //This line gives and error when rightclicking the tile under a unit
-                hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+                } else {
+                    Debug.Log("You have attacked an invalid target");
+                }
+            
             } else {
                 Debug.Log("No Target!");
             }
