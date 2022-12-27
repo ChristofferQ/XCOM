@@ -15,11 +15,12 @@ public class CombatManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && (inCombat == true))
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) && (inCombat == true))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
+                var unit = GetComponent<Unit>();
                 if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) )
                 {
                     Debug.Log("You have attacked: " + hit.collider.gameObject.name);
@@ -42,7 +43,7 @@ public class CombatManager : MonoBehaviour
         //select tiles in range
         List<Tile> area = new List<Tile>();
         area.Add(GridManager.Instance.GetTileAtPosition(pos));
-        Debug.Log(area[0] + "This is start of ATTACK");
+        //Debug.Log(area[0] + "This is start of ATTACK");
         while ( attackCount < attack)
         {
             foreach (Tile tile in area.ToList() )

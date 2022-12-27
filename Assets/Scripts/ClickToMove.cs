@@ -35,7 +35,7 @@ public class ClickToMove : MonoBehaviour
 
                 var targetTile = GridManager.Instance.GetTileAtPosition(tmp2Dpos);
                 
-                Debug.Log("target tile: " + targetTile.transform.position + " inRange: " + targetTile.inRange);
+                //Debug.Log("target tile: " + targetTile.transform.position + " inRange: " + targetTile.inRange);
                 if (targetTile.inRange && targetTile.Occupied == false)
                 {
                     var unit = GetComponent<Unit>();

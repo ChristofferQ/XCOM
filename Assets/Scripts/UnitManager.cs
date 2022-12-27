@@ -109,7 +109,7 @@ public class UnitManager : MonoBehaviour
             Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
             OccupiedTiles.Add(unitTile);
-            Debug.Log("EnemyUnits: " + element.ToString());
+            //Debug.Log("EnemyUnits: " + element.ToString());
             //Debug.Log("AllUnits !!!!!: " + element.ToString());
         }
         foreach (Tile tile in OccupiedTiles.ToList())
@@ -122,7 +122,7 @@ public class UnitManager : MonoBehaviour
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
             OccupiedTiles2.Add(unitTile);
-            Debug.Log("PlayerUnits: " + element.ToString());
+            //Debug.Log("PlayerUnits: " + element.ToString());
         }
          foreach (Tile tile in OccupiedTiles2.ToList())
             {

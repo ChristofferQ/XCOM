@@ -84,8 +84,8 @@ public class PlayerManager : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach(var hitCollider in hitColliders)
         {
-            Debug.Log("You have found me!");
-            Debug.Log("Hero: " + hitCollider.name);
+            //Debug.Log("You have found me!");
+            //Debug.Log("Hero: " + hitCollider.name);
             hitCollider.GetComponent<Unit>().inCombatRange = true;
         }
     }
