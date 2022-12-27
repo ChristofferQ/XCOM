@@ -6,11 +6,14 @@ using System.Linq;
 
 public class Unit : MonoBehaviour
 {
+    [Header("Health Settings")]
     public int maxHealth;
     public int currentHealth;
     public HealthBar healthBar;
+    [Header("Shield Settings")]
     public int currentShield;
     public ShieldBar ShieldBar;
+    [Header("Combat Settings")]
     public int movementSpeed = 3;
     public int attackRange;
     public int actionCount = 2;

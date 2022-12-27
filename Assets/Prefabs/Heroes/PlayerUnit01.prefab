@@ -152,7 +152,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 4615052039887749174}
-  currentShield: 0
+  hej: 
+  currentShield: 100
   ShieldBar: {fileID: 826872940227262090}
   movementSpeed: 3
   attackRange: 1

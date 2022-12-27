@@ -16,9 +16,6 @@ public class UnitManager : MonoBehaviour
     public List<GameObject> PlayerUnits = new List<GameObject>();
     public List<GameObject> EnemyUnits = new List<GameObject>();
     private static List<Tile> OccupiedTiles2 = new List<Tile>();
-    public GameObject unit;
-    public Transform meeple;
-    public List<GameObject> allBar = new List<GameObject>();
    
     void Awake()
     {

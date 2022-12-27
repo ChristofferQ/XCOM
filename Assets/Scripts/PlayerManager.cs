@@ -106,25 +106,12 @@ public class PlayerManager : MonoBehaviour
             }
         }  
 
+
         //Simple way to change players in testing, should be rewritten/changed later.
-        if (Input.GetKeyDown("space")) {
-        if (GameManager.Instance.gameState == GameState.HerosTurn) {
-            GameManager.Instance.ChangeState(GameState.EnemysTurn);
-            for(int i = 0; i < units.Count; i++)
-            {
-                units[i].actionCount = 2;
-                Debug.Log(units);
-            }
-            //GetComponent<Unit>().actionCount = 2;
-            Debug.Log("Changed from Hero to Enemy turn");
-            } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
-                GameManager.Instance.ChangeState(GameState.HerosTurn);
-                Debug.Log("Changed from Enemy to Hero turn");
-            } else {
-                return;
-            }
-            
-        }    
+        if (Input.GetKeyDown("space")) 
+        {
+            end();
+        }
 
         if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
             performCombat();
@@ -153,7 +140,7 @@ public class PlayerManager : MonoBehaviour
             } else {
                 return;
             }
-            
+           
     } 
     
     
