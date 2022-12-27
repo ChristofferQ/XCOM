@@ -8,7 +8,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private GameObject selectedUnit = null; 
     [SerializeField] private List<GameObject> OwnedUnits = new List<GameObject>(); 
     public bool isPerformingAction = false;
-    public static PlayerManager Instance; 
+    public static PlayerManager Instance;
+
 
     private static List<Unit> units = new List<Unit>();
 
@@ -127,6 +128,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.Instance.gameState == GameState.HerosTurn) {
             GameManager.Instance.ChangeState(GameState.EnemysTurn);
+            Timer.Instance.ResetTimer();
             for(int i = 0; i < units.Count; i++)
             {
                 units[i].actionCount = 2;
@@ -136,7 +138,13 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Changed from Hero to Enemy turn");
             } else if(GameManager.Instance.gameState == GameState.EnemysTurn) {
                 GameManager.Instance.ChangeState(GameState.HerosTurn);
+                Timer.Instance.ResetTimer();
                 Debug.Log("Changed from Enemy to Hero turn");
+                for(int i = 0; i < units.Count; i++)
+            {
+                units[i].actionCount = 2;
+                Debug.Log(units);
+            }
             } else {
                 return;
             }

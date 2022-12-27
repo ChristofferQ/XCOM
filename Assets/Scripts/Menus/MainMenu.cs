@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject gameTimer;
    public void PlayGame()
    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -29,5 +30,15 @@ public class MainMenu : MonoBehaviour
     public void NextLevel()
     {
         
+    }
+    public void showGameTimer(bool tog)
+    {
+        if (tog == true)
+        {
+            gameTimer.SetActive(true);
+        }else
+        {
+            gameTimer.SetActive(false);
+        }
     }
 }

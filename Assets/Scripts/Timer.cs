@@ -2,7 +2,11 @@ using UnityEngine;
 using TMPro;
 public class Timer : MonoBehaviour
 {
-    private float timeDuration = 3F;
+    private float timeDuration = 3F * 60;
+    public static Timer Instance; 
+
+    [SerializeField]
+    private bool countDown = true;
 
     private float timer;
 
@@ -23,26 +27,44 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResetTimer();
+        if (countDown)
+        {
+            timer = timeDuration;
+        }else
+        {
+            timer = 0;
+        }
+        SetTextDisplay(true);
+        Instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (countDown && timer > 6)
         {
             timer -= Time.deltaTime;
             UpdateTimerDisplay(timer);
-        } else
-        {
-            Flash();
             
+        } else if (!countDown && timer < timeDuration)
+        {
+            timer += Time.deltaTime;
+            UpdateTimerDisplay(timer);
+        } else if ((timer < 6) && (timer > 0))
+            {
+                Flash();
+                timer -= Time.deltaTime;
+                UpdateTimerDisplay(timer);
+            }else 
+        {
+            PlayerManager.Instance.end();
+            timer = timeDuration;    
         }
         
         
     }
 
-    private void ResetTimer()
+    public void ResetTimer()
     {
         timer = timeDuration;
     }
@@ -61,11 +83,16 @@ public class Timer : MonoBehaviour
 
     private void Flash()
     {
-        if (timer != 0)
+        if (countDown && timer != 0)
         {
-            timer = 0;
+            //timer = 0;
             UpdateTimerDisplay(timer);
-        }
+        } 
+        if (!countDown && timer != timeDuration)
+        {
+            timer = timeDuration;
+            UpdateTimerDisplay(timer);
+        } 
         if (flashTimer <= 0)
         {
             flashTimer = flashDuration;
