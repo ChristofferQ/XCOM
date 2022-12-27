@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] private GameObject selectedUnit = null; 
+    [SerializeField] public GameObject selectedUnit = null; 
     [SerializeField] private List<GameObject> OwnedUnits = new List<GameObject>(); 
     public static PlayerManager Instance; 
 
