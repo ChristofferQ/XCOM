@@ -33,28 +33,25 @@ public class PlayerManager : MonoBehaviour
     private void SelectUnit(GameObject unit) 
     {
         if (!unit) return; 
+        DeselectUnit();
 
         // disable ClickToMove script on current selectedUnit
         if (this.selectedUnit != null)
             this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
 
-        //Clean Movement Tiles before making new
+        //Clean Tiles before making new
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
         CombatManager.Instance.CleanCombatTiles();
 
         // change the selected unit to the new one. 
         this.selectedUnit = unit; 
-        this.selectedUnit.GetComponent<NavMeshAgent>().SetDestination(this.selectedUnit.transform.position);
-        this.selectedUnit.GetComponent<ClickToMove>().enabled = true;
 
         showStatsBar(unit);
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
-        var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
-        
-        MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
+        UnitManager.Instance.DisplayUnitTile(pos);
         UnitManager.Instance.findAllUnits();
-        //UnitManager.Instance.DisplayUnitTile(pos);
+        
     }
 
     public void DeselectUnit()
@@ -66,6 +63,11 @@ public class PlayerManager : MonoBehaviour
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
         CombatManager.Instance.CleanCombatTiles();
+        for(int i = 0; i < units.Count; i++)
+        {
+            units[i].inCombatRange = false;
+            units[i].stats.alpha = 0f;
+        }
 
     }
 
@@ -79,10 +81,10 @@ public class PlayerManager : MonoBehaviour
             if(Physics.Raycast(ray, out hit)) {
                 if(hit.collider.tag == "PlayerUnit" && GameManager.Instance.gameState == GameState.HerosTurn && GameManager.Instance.gameState != GameState.EnemysTurn) {
                     SelectUnit(hit.transform.gameObject);
-                    Debug.Log("Hero Selected");
+                    Debug.Log(hit.collider.GetComponent<Unit>().name + " Selected");
                 } else if (hit.collider.tag == "EnemyUnit" && GameManager.Instance.gameState != GameState.HerosTurn && GameManager.Instance.gameState == GameState.EnemysTurn) {
                     SelectUnit(hit.transform.gameObject);
-                    Debug.Log("Enemy Selected");
+                    Debug.Log(hit.collider.GetComponent<Unit>().name + " Selected");
                     
                 } else {
                 DeselectUnit();
@@ -102,6 +104,10 @@ public class PlayerManager : MonoBehaviour
             //Debug.Log(CombatManager.Instance.inCombat);
             //CombatManager.Instance.inCombat = true;
             //Debug.Log(CombatManager.Instance.inCombat);
+        }
+
+        if(Input.GetKeyDown("f") && (this.selectedUnit != null)) {
+            MovementManager.Instance.performMovement();
         }
 
 
@@ -125,18 +131,19 @@ public class PlayerManager : MonoBehaviour
                 for(int i = 0; i < units.Count; i++)
             {
                 units[i].actionCount = 2;
-                Debug.Log(units);
             }
             } else {
                 return;
             }
+            DeselectUnit();
+            MovementManager.Instance.CleanMovementTiles();
+            CombatManager.Instance.CleanCombatTiles();
         }    
     
     public void showStatsBar(GameObject unit)
     {
         if (!this.selectedUnit) return;
         
-        var test = this.selectedUnit.GetComponent<Unit>();
-        test.stats.alpha = 1.0f;
+        this.selectedUnit.GetComponent<Unit>().stats.alpha = 1.0f;
     }
 }

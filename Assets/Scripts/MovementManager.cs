@@ -12,6 +12,29 @@ public class MovementManager : MonoBehaviour
         Instance = this; 
     }
 
+    void Update()
+    {
+
+    }
+
+    public void performMovement()
+    {
+        var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
+        if (!unit) return;
+
+        if (unit.actionCount > 0)
+        {
+            var pos = GridManager.Instance.GetCoordinateFromWorldPos(unit.transform.position);
+            var movementSpeed = unit.movementSpeed;
+
+            unit.GetComponent<ClickToMove>().enabled = true;
+            unit.GetComponent<UnityEngine.AI.NavMeshAgent>().SetDestination(unit.transform.position);
+
+            MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
+            
+        }
+    }
+
     public void SetMovementTiles(Vector2 pos, int movement)
     {
         Dictionary<Vector2, Tile> tiles = GridManager.Instance._tiles;

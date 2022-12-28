@@ -7,7 +7,7 @@ public class HudMenu : MonoBehaviour
 {
     public void Move()
     {
-        
+        MovementManager.Instance.performMovement();   
     }
 
     public void Attack()

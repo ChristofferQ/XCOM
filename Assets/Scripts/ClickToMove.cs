@@ -43,7 +43,6 @@ public class ClickToMove : MonoBehaviour
                     {
                         targetLocation = targetTile.transform.position;
                         unit.actionCount--;
-                        Debug.Log(unit.actionCount);
                     }
 
                 }

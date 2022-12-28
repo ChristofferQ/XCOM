@@ -34,6 +34,7 @@ public class CombatManager : MonoBehaviour
             } else {
                 Debug.Log("No Target!");
             }
+            PlayerManager.Instance.DeselectUnit();
         }
     }
 
@@ -55,8 +56,7 @@ public class CombatManager : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(center, radius);
             foreach(var hitCollider in hitColliders)
             {
-                //Debug.Log("You have found me!");
-                //Debug.Log("Hero: " + hitCollider.name);
+
                 hitCollider.GetComponent<Unit>().inCombatRange = true;
             }
         } else {
