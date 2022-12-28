@@ -7,11 +7,13 @@ public class HudMenu : MonoBehaviour
 {
     public void Move()
     {
+        if(!PlayerManager.Instance.selectedUnit) return;
         MovementManager.Instance.performMovement();   
     }
 
     public void Attack()
    {
+        if(!PlayerManager.Instance.selectedUnit) return;
         CombatManager.Instance.performCombat();
    }
 
