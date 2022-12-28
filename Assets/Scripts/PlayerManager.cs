@@ -66,6 +66,10 @@ public class PlayerManager : MonoBehaviour
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
         CombatManager.Instance.CleanCombatTiles();
+        for(int i = 0; i < units.Count; i++)
+        {
+            units[i].inCombatRange = false;
+        }
 
     }
 
@@ -79,10 +83,10 @@ public class PlayerManager : MonoBehaviour
             if(Physics.Raycast(ray, out hit)) {
                 if(hit.collider.tag == "PlayerUnit" && GameManager.Instance.gameState == GameState.HerosTurn && GameManager.Instance.gameState != GameState.EnemysTurn) {
                     SelectUnit(hit.transform.gameObject);
-                    Debug.Log("Hero Selected");
+                    Debug.Log(hit.collider.GetComponent<Unit>().name + " Selected");
                 } else if (hit.collider.tag == "EnemyUnit" && GameManager.Instance.gameState != GameState.HerosTurn && GameManager.Instance.gameState == GameState.EnemysTurn) {
                     SelectUnit(hit.transform.gameObject);
-                    Debug.Log("Enemy Selected");
+                    Debug.Log(hit.collider.GetComponent<Unit>().name + " Selected");
                     
                 } else {
                 DeselectUnit();
@@ -125,11 +129,13 @@ public class PlayerManager : MonoBehaviour
                 for(int i = 0; i < units.Count; i++)
             {
                 units[i].actionCount = 2;
-                Debug.Log(units);
             }
             } else {
                 return;
             }
+            DeselectUnit();
+            MovementManager.Instance.CleanMovementTiles();
+            CombatManager.Instance.CleanCombatTiles();
         }    
     
     public void showStatsBar(GameObject unit)
