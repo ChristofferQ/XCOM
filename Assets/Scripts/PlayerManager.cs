@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviour
     private void SelectUnit(GameObject unit) 
     {
         if (!unit) return; 
+        DeselectUnit();
 
         // disable ClickToMove script on current selectedUnit
         if (this.selectedUnit != null)
@@ -69,6 +70,7 @@ public class PlayerManager : MonoBehaviour
         for(int i = 0; i < units.Count; i++)
         {
             units[i].inCombatRange = false;
+            units[i].stats.alpha = 0f;
         }
 
     }
@@ -142,7 +144,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (!this.selectedUnit) return;
         
-        var test = this.selectedUnit.GetComponent<Unit>();
-        test.stats.alpha = 1.0f;
+        this.selectedUnit.GetComponent<Unit>().stats.alpha = 1.0f;
     }
 }
