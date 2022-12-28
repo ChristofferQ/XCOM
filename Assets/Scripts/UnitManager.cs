@@ -74,13 +74,8 @@ public class UnitManager : MonoBehaviour
                 Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(tile.transform.position);
                 var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
                 OccupiedTiles.Add(unitTile);
-
             }
             size++;
-            foreach( var x in OccupiedTiles) {
-            Debug.Log("Occupied tiles: " + x.ToString());
-            }
-
         }
         foreach (Tile tile in OccupiedTiles.ToList())
             {
@@ -110,8 +105,6 @@ public class UnitManager : MonoBehaviour
             Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
             OccupiedTiles.Add(unitTile);
-            //Debug.Log("EnemyUnits: " + element.ToString());
-            //Debug.Log("AllUnits !!!!!: " + element.ToString());
         }
         foreach (Tile tile in OccupiedTiles.ToList())
             {
@@ -123,35 +116,11 @@ public class UnitManager : MonoBehaviour
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
             OccupiedTiles2.Add(unitTile);
-            //Debug.Log("PlayerUnits: " + element.ToString());
         }
          foreach (Tile tile in OccupiedTiles2.ToList())
             {
                 tile.PlayerHighlight.SetActive(true);
                 tile.Occupied = true;
             }
-
-
-        /* Used to find all units and hightlight their corresponding tiles
-
-        public void findAllUnits() {
-
-        AllUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
-        AllUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
-        foreach( var element in AllUnits.ToList()) {
-            Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
-            Debug.Log("First check" + tilePos);
-            var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
-            Debug.Log("Second check" + tilePos);
-            OccupiedTiles.Add(unitTile);
-            Debug.Log("Third check" + tilePos);
-            //Debug.Log("AllUnits !!!!!: " + element.ToString());
-        }
-        foreach (Tile tile in OccupiedTiles.ToList()) {
-                tile.unitHighlight.SetActive(true);
-            }
-
-        */
-            
     }
 }

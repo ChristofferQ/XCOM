@@ -39,23 +39,19 @@ public class PlayerManager : MonoBehaviour
         if (this.selectedUnit != null)
             this.selectedUnit.GetComponent<ClickToMove>().enabled = false;
 
-        //Clean Movement Tiles before making new
+        //Clean Tiles before making new
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
         CombatManager.Instance.CleanCombatTiles();
 
         // change the selected unit to the new one. 
         this.selectedUnit = unit; 
-        this.selectedUnit.GetComponent<NavMeshAgent>().SetDestination(this.selectedUnit.transform.position);
-        this.selectedUnit.GetComponent<ClickToMove>().enabled = true;
 
         showStatsBar(unit);
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
-        var movementSpeed = this.selectedUnit.GetComponent<Unit>().movementSpeed; 
-        
-        MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
+        UnitManager.Instance.DisplayUnitTile(pos);
         UnitManager.Instance.findAllUnits();
-        //UnitManager.Instance.DisplayUnitTile(pos);
+        
     }
 
     public void DeselectUnit()
@@ -108,6 +104,10 @@ public class PlayerManager : MonoBehaviour
             //Debug.Log(CombatManager.Instance.inCombat);
             //CombatManager.Instance.inCombat = true;
             //Debug.Log(CombatManager.Instance.inCombat);
+        }
+
+        if(Input.GetKeyDown("f") && (this.selectedUnit != null)) {
+            MovementManager.Instance.performMovement();
         }
 
 
