@@ -19,11 +19,13 @@ public class HudMenu : MonoBehaviour
 
    public void potion()
     {
+        if(!PlayerManager.Instance.selectedUnit) return;
         
     }
 
     public void cancel()
     {
+        if(!PlayerManager.Instance.selectedUnit) return;
         PlayerManager.Instance.DeselectUnit();
     }
 

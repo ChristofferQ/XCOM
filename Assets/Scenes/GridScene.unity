@@ -568,7 +568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4036d4d74fface744b7aeff68ab58b4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1563,7 +1563,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 524651109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 271189276}
+        m_TargetAssemblyTypeName: HudMenu, Assembly-CSharp
+        m_MethodName: cancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &524651109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,7 +2551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8453b555edb3604690e9e38436ecc0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ff81587c3733b243a320509adffe64f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2607,7 +2619,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 963d253155a87e045847fd3a1470b9fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff823fe5f0bc75248ad748edf7f002e8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4050,7 +4062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51da27b689d7b944eb32071c5653ca0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65dc1dd77bc023b46806b5d23232ba78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4208,7 +4220,7 @@ GameObject:
   - component: {fileID: 1979817477}
   - component: {fileID: 1979817476}
   m_Layer: 5
-  m_Name: PotionButton
+  m_Name: ErminButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
