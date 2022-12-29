@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -75,6 +76,7 @@ public class PlayerManager : MonoBehaviour
     {
         //Select & Deselect Unit 
         if(Input.GetMouseButtonUp(0)) {
+            if (!EventSystem.current.IsPointerOverGameObject()){
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             
@@ -90,6 +92,7 @@ public class PlayerManager : MonoBehaviour
                 DeselectUnit();
                 }
             }
+        }
         }  
 
 
