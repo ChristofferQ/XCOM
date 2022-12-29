@@ -8,6 +8,9 @@ public class CombatManager : MonoBehaviour
     public static CombatManager Instance;
     public bool inCombat = false;
 
+    private List<GameObject> AlivePlayerUnits = new List<GameObject>();
+    private List<GameObject> AliveEnemyUnits = new List<GameObject>();
+
     void Start() 
     {
         Instance = this; 
@@ -35,6 +38,11 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("No Target!");
             }
             PlayerManager.Instance.DeselectUnit();
+        }
+
+        if(Input.GetKeyDown("f"))
+        {
+            GameOver();
         }
     }
 
@@ -187,6 +195,19 @@ public class CombatManager : MonoBehaviour
 
     public void GameOver()
     {
+        AlivePlayerUnits.Clear();
+        AliveEnemyUnits.Clear();
 
+        AlivePlayerUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));     
+        AliveEnemyUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
+
+        if(AlivePlayerUnits.Count == 0)
+        {
+            Debug.Log("Red wins!");
+        }
+        if(AliveEnemyUnits.Count == 0)
+        {
+            Debug.Log("Green wins!");
+        }
     }
 }

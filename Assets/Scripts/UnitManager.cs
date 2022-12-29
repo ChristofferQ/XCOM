@@ -99,7 +99,6 @@ public class UnitManager : MonoBehaviour
     }
 
     public void findAllUnits() {
-
         EnemyUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
         foreach( var element in EnemyUnits.ToList()) {
             if (!element) continue;
@@ -108,10 +107,10 @@ public class UnitManager : MonoBehaviour
             OccupiedTiles.Add(unitTile);
         }
         foreach (Tile tile in OccupiedTiles.ToList())
-            {
-                tile.EnemyHighlight.SetActive(true);
-                tile.Occupied = true;
-            }
+        {
+            tile.EnemyHighlight.SetActive(true);
+            tile.Occupied = true;
+        }
         PlayerUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
         foreach( var element in PlayerUnits.ToList()) {
             if (!element) continue;
@@ -120,9 +119,11 @@ public class UnitManager : MonoBehaviour
             OccupiedTiles2.Add(unitTile);
         }
          foreach (Tile tile in OccupiedTiles2.ToList())
-            {
-                tile.PlayerHighlight.SetActive(true);
-                tile.Occupied = true;
-            }
+        {
+            tile.PlayerHighlight.SetActive(true);
+            tile.Occupied = true;
+        }
+        EnemyUnits.Clear();
+        PlayerUnits.Clear();
     }
 }
