@@ -17,8 +17,21 @@ public class HudMenu : MonoBehaviour
         CombatManager.Instance.performCombat();
    }
 
+   public void potion()
+    {
+        if(!PlayerManager.Instance.selectedUnit) return;
+        
+    }
+
+    public void cancel()
+    {
+        if(!PlayerManager.Instance.selectedUnit) return;
+        PlayerManager.Instance.DeselectUnit();
+    }
+
    public void endTurn()
     {
         PlayerManager.Instance.end();
     }
+
 }
