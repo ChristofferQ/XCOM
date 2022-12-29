@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8317250213733901717}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -130,6 +130,7 @@ MonoBehaviour:
   Occupied: 0
   parent: {fileID: 0}
   inRange: 0
+  inAttackRange: 0
 --- !u!1 &1679090808620341778
 GameObject:
   m_ObjectHideFlags: 0
