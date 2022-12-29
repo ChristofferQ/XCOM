@@ -3,3 +3,21 @@ TO DO (FIX LIST):
 SetMovementTiles overlapping SetCombatTiles when using hotkeys or pressing HUD buttons while performCombat is active.
 When attacking -- performCombat -- the Unit is deselected. Change this, so it is similar to performMovement.
 When moving: call findAllUnits again when the Unit has stopped moving, so the player can still see where units are located on tiles (unitHighlight, PlayerHighlight & EnemyHighlight)
+
+
+
+
+Ermins TODO:
+
+Add Debug log box in game.
+When the game is done go to credit scene and show who won and credit rolls should stop underneath winner declaration.
+Add potion instead of chest in hudmenu and add a int that shows how many potion you have
+display what ability you have in statsbar
+instead of play button then new game
+Reset game button in pausemenu
+
+
+
+chest
+Dragon
+Design
