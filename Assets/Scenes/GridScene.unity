@@ -2808,7 +2808,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107844984
 GameObject:
@@ -3442,7 +3442,7 @@ RectTransform:
   - {fileID: 2059593904}
   - {fileID: 1582861846}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4763,6 +4763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game timer
       objectReference: {fileID: 0}
+    - target: {fileID: 3753346635665315742, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
 --- !u!1001 &5624812919369024557
@@ -4839,7 +4843,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 53439363604328802, guid: e40fcf638b9b1f841b83bb586b1a94b7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 53439363604328802, guid: e40fcf638b9b1f841b83bb586b1a94b7, type: 3}
       propertyPath: m_LocalPosition.x
