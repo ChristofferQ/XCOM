@@ -7,8 +7,9 @@ public class ShieldBar : MonoBehaviour
 {
     public Slider slider;
 
-     public void SetValueShield(int Shield)
+    public void SetMaxShield(int Shield)
     {
+        slider.maxValue = Shield;
         slider.value = Shield;
     }
 

@@ -38,7 +38,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-        public void performCombat() 
+    public void performCombat() 
     {
         var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
         if (!unit) return;
@@ -56,7 +56,6 @@ public class CombatManager : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(center, radius);
             foreach(var hitCollider in hitColliders)
             {
-
                 hitCollider.GetComponent<Unit>().inCombatRange = true;
             }
         } else {
@@ -115,8 +114,6 @@ public class CombatManager : MonoBehaviour
                         if (nextTile.dist == -1) nextTile.dist = attackCount +1;
                     }
 
-                    }
-
                     if (GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x + 1, tilePos.y + 1)) != null && GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x + 1, tilePos.y + 1)).isCheck == false)
                     {
                         var nextTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x + 1, tilePos.y + 1));
@@ -148,6 +145,7 @@ public class CombatManager : MonoBehaviour
                         nextTile.parent = tile;
                         if (nextTile.dist == -1) nextTile.dist = attackCount + 1;
                     }
+                }
             }
             attackCount++;
         }
@@ -185,5 +183,10 @@ public class CombatManager : MonoBehaviour
             tile.parent = tile;
             tile.dist = -1;
         }
+    }
+
+    public void GameOver()
+    {
+
     }
 }

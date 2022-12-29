@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  maxShield: 100
   currentHealth: 0
   healthBar: {fileID: 4615052039887749174}
-  hej: 
   currentShield: 100
   ShieldBar: {fileID: 826872940227262090}
   movementSpeed: 3
