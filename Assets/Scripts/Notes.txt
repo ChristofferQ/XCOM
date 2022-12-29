@@ -1,0 +1,5 @@
+TO DO (FIX LIST):
+
+SetMovementTiles overlapping SetCombatTiles when using hotkeys or pressing HUD buttons while performCombat is active.
+When attacking -- performCombat -- the Unit is deselected. Change this, so it is similar to performMovement.
+When moving: call findAllUnits again when the Unit has stopped moving, so the player can still see where units are located on tiles (unitHighlight, PlayerHighlight & EnemyHighlight)

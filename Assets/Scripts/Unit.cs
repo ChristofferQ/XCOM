@@ -7,10 +7,11 @@ using System.Linq;
 public class Unit : MonoBehaviour
 {
     [Header("Health Settings")]
-    public int maxHealth;
+    public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
     [Header("Shield Settings")]
+    public int maxShield = 100;
     public int currentShield;
     public ShieldBar ShieldBar;
     [Header("Combat Settings")]
@@ -30,8 +31,9 @@ public class Unit : MonoBehaviour
     void Start() 
     {
         currentHealth = maxHealth;
+        currentShield = maxShield;
         healthBar.SetMaxHealth(maxHealth);
-        ShieldBar.SetValueShield(currentShield);
+        ShieldBar.SetMaxShield(maxShield);
 
         PlayerManager.AddUnit(this); 
 
@@ -78,7 +80,13 @@ public class Unit : MonoBehaviour
         {
             currentShield -= damage;
             ShieldBar.SetShield(currentShield);
-        }   
+        }
+        if (currentHealth <= 0)
+        {
+            Debug.Log(GetComponent<Unit>().name + " is Dead!");
+            gameObject.SetActive(false);
+        }
+        CombatManager.Instance.GameOver();
     }
 }
 

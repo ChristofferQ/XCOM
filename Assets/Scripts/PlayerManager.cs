@@ -52,7 +52,6 @@ public class PlayerManager : MonoBehaviour
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
         UnitManager.Instance.DisplayUnitTile(pos);
         UnitManager.Instance.findAllUnits();
-        
     }
 
     public void DeselectUnit()
@@ -66,10 +65,10 @@ public class PlayerManager : MonoBehaviour
         CombatManager.Instance.CleanCombatTiles();
         for(int i = 0; i < units.Count; i++)
         {
+            if (!units[i]) continue;
             units[i].inCombatRange = false;
             units[i].stats.alpha = 0f;
         }
-
     }
 
     void Update() 
@@ -95,25 +94,32 @@ public class PlayerManager : MonoBehaviour
         }
         }  
 
+        //HotKeys for our HUD buttons
 
-        //Simple way to change players in testing, should be rewritten/changed later.
         if (Input.GetKeyDown("space")) 
         {
             end();
         }
 
-        if(Input.GetKeyDown("g") && (this.selectedUnit != null)) {
-            CombatManager.Instance.performCombat();
-            //Debug.Log(CombatManager.Instance.inCombat);
-            //CombatManager.Instance.inCombat = true;
-            //Debug.Log(CombatManager.Instance.inCombat);
-        }
-
-        if(Input.GetKeyDown("f") && (this.selectedUnit != null)) {
+        if(Input.GetKeyDown("1") && (this.selectedUnit != null)) 
+        {
             MovementManager.Instance.performMovement();
         }
 
+        if(Input.GetKeyDown("2") && (this.selectedUnit != null)) 
+        {
+            CombatManager.Instance.performCombat();
+        }
 
+        if(Input.GetKeyDown("3") && (this.selectedUnit != null)) 
+        {
+            Debug.Log("POWER UP BITCHES!");
+        }
+
+        if(Input.GetKeyDown("4") && (this.selectedUnit != null)) 
+        {
+            SelectUnit(selectedUnit);
+        }
     }
 
     public void end()

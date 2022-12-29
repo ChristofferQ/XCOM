@@ -99,28 +99,31 @@ public class UnitManager : MonoBehaviour
     }
 
     public void findAllUnits() {
-
         EnemyUnits.AddRange(GameObject.FindGameObjectsWithTag("EnemyUnit"));
         foreach( var element in EnemyUnits.ToList()) {
+            if (!element) continue;
             Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
             OccupiedTiles.Add(unitTile);
         }
         foreach (Tile tile in OccupiedTiles.ToList())
-            {
-                tile.EnemyHighlight.SetActive(true);
-                tile.Occupied = true;
-            }
+        {
+            tile.EnemyHighlight.SetActive(true);
+            tile.Occupied = true;
+        }
         PlayerUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
         foreach( var element in PlayerUnits.ToList()) {
+            if (!element) continue;
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
             OccupiedTiles2.Add(unitTile);
         }
          foreach (Tile tile in OccupiedTiles2.ToList())
-            {
-                tile.PlayerHighlight.SetActive(true);
-                tile.Occupied = true;
-            }
+        {
+            tile.PlayerHighlight.SetActive(true);
+            tile.Occupied = true;
+        }
+        EnemyUnits.Clear();
+        PlayerUnits.Clear();
     }
 }
