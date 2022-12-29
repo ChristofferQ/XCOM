@@ -58,7 +58,7 @@ public class Timer : MonoBehaviour
             }else 
         {
             PlayerManager.Instance.end();
-            timer = timeDuration;    
+            ResetTimer();
         }
         
         
