@@ -23,15 +23,30 @@ public class CombatManager : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
-                var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
-                if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) )
+                if (GameManager.Instance.gameState == GameState.HerosTurn)
                 {
-                    Debug.Log("You have attacked: " + hit.collider.gameObject.name);
-                    hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
-                    unit.actionCount--;
+                    var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
+                    if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "EnemyUnit"))
+                    {
+                        Debug.Log("You have attacked: " + hit.collider.gameObject.name);
+                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+                        unit.actionCount--;
 
-                } else {
-                    Debug.Log("You have attacked an invalid target");
+                    } else {
+                        Debug.Log("You have attacked an invalid target");
+                    }
+                } else if (GameManager.Instance.gameState == GameState.EnemysTurn)
+                {
+                    var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
+                    if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "PlayerUnit"))
+                    {
+                        Debug.Log("You have attacked: " + hit.collider.gameObject.name);
+                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+                        unit.actionCount--;
+
+                    } else {
+                        Debug.Log("You have attacked an invalid target");
+                    }
                 }
             
             } else {

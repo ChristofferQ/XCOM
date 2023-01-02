@@ -31,12 +31,12 @@ public class MovementManager : MonoBehaviour
             unit.GetComponent<UnityEngine.AI.NavMeshAgent>().SetDestination(unit.transform.position);
 
             MovementManager.Instance.SetMovementTiles(pos, movementSpeed);
-            
         }
     }
 
     public void SetMovementTiles(Vector2 pos, int movement)
     {
+        CombatManager.Instance.CleanCombatTiles();
         Dictionary<Vector2, Tile> tiles = GridManager.Instance._tiles;
         int moveCount = 0;
         //select tiles in range
