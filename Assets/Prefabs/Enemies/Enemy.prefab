@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  maxShield: 100
   currentHealth: 0
   healthBar: {fileID: 4785785688655244533}
+  maxShield: 100
   currentShield: 0
   ShieldBar: {fileID: 655510502946036297}
   movementSpeed: 3
@@ -172,6 +172,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6503753198149873646}
     m_Modifications:
+    - target: {fileID: -2261437236481287584, guid: 17d71330467641949af7069e93b060fe, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2214875964113272472, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -278,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871913384349082585, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8871913384349082585, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_MaxValue
@@ -286,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871913384428089408, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8871913384428089408, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_MaxValue
@@ -361,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae870d438225ec4194aacc063ca41fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cam: {fileID: 0}
+  _cam: {fileID: 2056488, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
 --- !u!225 &8011666096121710012 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: -2261437236481287584, guid: 17d71330467641949af7069e93b060fe, type: 3}
