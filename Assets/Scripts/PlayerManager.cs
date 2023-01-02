@@ -120,6 +120,7 @@ public class PlayerManager : MonoBehaviour
         {
             SelectUnit(selectedUnit);
         }
+        
     }
 
     public void end()
@@ -154,5 +155,25 @@ public class PlayerManager : MonoBehaviour
         if (!this.selectedUnit) return;
         
         this.selectedUnit.GetComponent<Unit>().stats.alpha = 1.0f;
+    }
+
+    public void ShowAllStatsBar()
+    {
+        
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            for(int i = 0; i < units.Count; i++)
+        {
+            if (!units[i]) continue;
+            units[i].stats.alpha = 1f;
+        }
+        }else
+        {
+            for(int i = 0; i < units.Count; i++)
+        {
+            if (!units[i]) continue;
+            units[i].stats.alpha = 0f;
+        }
+        }
     }
 }

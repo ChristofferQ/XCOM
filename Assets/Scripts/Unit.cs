@@ -6,9 +6,11 @@ using System.Linq;
 
 public class Unit : MonoBehaviour
 {
+    public static Unit Instance;
     [Header("Health Settings")]
     public int maxHealth = 100;
     public int currentHealth;
+    public int potion = 20;
     public HealthBar healthBar;
     [Header("Shield Settings")]
     public int maxShield = 100;
@@ -30,6 +32,7 @@ public class Unit : MonoBehaviour
     
     void Start() 
     {
+        Instance = this;
         currentHealth = maxHealth;
         currentShield = maxShield;
         healthBar.SetMaxHealth(maxHealth);
@@ -46,6 +49,13 @@ public class Unit : MonoBehaviour
         {
             TakeDamage(20);
         }
+        if (Input.GetKeyDown("p"))
+        {
+            healing();
+        }
+
+        //PlayerManager.Instance.ShowAllStatsBar();
+        //PlayerManager.Instance.showStatsBar(PlayerManager.Instance.selectedUnit);
 
         if (actionCount > numOfActions)
         {
@@ -87,6 +97,13 @@ public class Unit : MonoBehaviour
             gameObject.SetActive(false);
         }
         CombatManager.Instance.GameOver();
+    }
+
+    public void healing()
+    {
+        if(currentHealth < 100 || currentHealth !> maxHealth)
+        currentHealth += potion;
+        healthBar.SetHealth(currentHealth);
     }
 }
 

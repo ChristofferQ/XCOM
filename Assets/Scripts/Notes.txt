@@ -12,7 +12,7 @@ Ermins TODO:
 
 Add Debug log box in game.
 When the game is done go to credit scene and show who won and credit rolls should stop underneath winner declaration.
-Add potion instead of chest in hudmenu and add a int that shows how many potion you have
+✅Add potion instead of chest in hudmenu and add a int that shows how many potion you have
 display what ability you have in statsbar
 instead of play button then new game
 Reset game button in pausemenu

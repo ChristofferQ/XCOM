@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class HudMenu : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class HudMenu : MonoBehaviour
    public void potion()
     {
         if(!PlayerManager.Instance.selectedUnit) return;
-        
+        Unit.Instance.healing();
     }
 
     public void cancel()
