@@ -40,7 +40,7 @@ public class UnitManager : MonoBehaviour
         for (int x = 0; x < NumberOfEnemies; x++)
         {
             Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width), 5, Random.Range(GridManager.Instance._depth,(GridManager.Instance._depth -5)));
-            var Enemy =Instantiate(enemiesToSpawn, randomSpawnPosition, Quaternion.identity);
+            var Enemy =Instantiate(enemiesToSpawn, randomSpawnPosition, Quaternion.Euler(0,180f,0));
             Enemy.name = $"Enemy {x + 1}";
         }  
         
