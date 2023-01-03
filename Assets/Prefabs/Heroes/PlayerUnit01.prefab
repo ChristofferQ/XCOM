@@ -150,8 +150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  potion: 20
   healthBar: {fileID: 4615052039887749174}
+  potion: 20
+  potionCount: {fileID: 9218996843718877863, guid: f18bfd6295d082f4ab0230b351e47a54, type: 3}
+  maxPotion: 1
   maxShield: 100
   currentShield: 100
   ShieldBar: {fileID: 826872940227262090}

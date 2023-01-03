@@ -149,9 +149,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  maxShield: 100
   currentHealth: 0
   healthBar: {fileID: 4785785688655244533}
+  potion: 20
+  potionCount: {fileID: 9218996843718877863, guid: f18bfd6295d082f4ab0230b351e47a54, type: 3}
+  maxPotion: 2
+  maxShield: 100
   currentShield: 0
   ShieldBar: {fileID: 655510502946036297}
   movementSpeed: 3
