@@ -102,8 +102,10 @@ public class Unit : MonoBehaviour
     public void healing()
     {
         if(currentHealth < 100 || currentHealth !> maxHealth)
-        currentHealth += potion;
-        healthBar.SetHealth(currentHealth);
+        Debug.Log("plzzzz times 2" + PlayerManager.Instance.selectedUnit.GetComponent<Unit>().currentHealth);
+        PlayerManager.Instance.selectedUnit.GetComponent<Unit>().currentHealth += potion;
+        Debug.Log("plzzzz"+ PlayerManager.Instance.selectedUnit.GetComponent<Unit>().currentHealth);
+        PlayerManager.Instance.selectedUnit.GetComponent<Unit>().healthBar.SetHealth(PlayerManager.Instance.selectedUnit.GetComponent<Unit>().currentHealth);
     }
 }
 
