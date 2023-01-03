@@ -20,6 +20,8 @@ public class Unit : MonoBehaviour
     public int actionCount = 2;
     public int numOfActions;
 
+    Animator animator;
+
     public Image[] actions;
     public Sprite fullAction;
     public Sprite emptyAction; 
@@ -38,6 +40,8 @@ public class Unit : MonoBehaviour
         PlayerManager.AddUnit(this); 
 
         stats.alpha = 0f;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update(){
@@ -69,6 +73,8 @@ public class Unit : MonoBehaviour
                 actions[i].enabled = false;
             }
         }
+
+        animator.SetFloat("BlendSpeed", GetComponent<UnityEngine.AI.NavMeshAgent>().velocity.magnitude);
     }
     public void TakeDamage(int damage)
     {
