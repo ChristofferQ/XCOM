@@ -77,11 +77,15 @@ public class CombatManager : MonoBehaviour
             var radius = 1;
             var center = unit.transform.position;
             Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-            foreach(var hitCollider in hitColliders)
+            foreach(Collider hitCollider in hitColliders)
             {
                 //Make Units attackle and show their healthbars
-                hitCollider.GetComponent<Unit>().inCombatRange = true;
-                hitCollider.GetComponent<Unit>().stats.alpha = 1.0f;
+                if (hitCollider.tag == "Tile") continue;
+                else 
+                {
+                    hitCollider.GetComponent<Unit>().inCombatRange = true;
+                    hitCollider.GetComponent<Unit>().stats.alpha = 1.0f;
+                }
             }
         } else {
             Debug.Log("Out of actions");
