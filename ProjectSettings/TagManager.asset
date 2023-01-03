@@ -8,6 +8,7 @@ TagManager:
   - EnemyUnit
   - statsBar
   - Tile
+  - Chest
   layers:
   - Default
   - TransparentFX
