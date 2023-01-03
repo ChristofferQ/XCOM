@@ -21,7 +21,7 @@ public class HudMenu : MonoBehaviour
    public void potion()
     {
         if(!PlayerManager.Instance.selectedUnit) return;
-        Unit.Instance.healing();
+        Unit.Instance.healing(20);
     }
 
     public void cancel()
