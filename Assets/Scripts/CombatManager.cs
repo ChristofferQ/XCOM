@@ -11,9 +11,12 @@ public class CombatManager : MonoBehaviour
     private List<GameObject> AlivePlayerUnits = new List<GameObject>();
     private List<GameObject> AliveEnemyUnits = new List<GameObject>();
 
+    public Animator animator;
+
     void Start() 
     {
         Instance = this; 
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -31,6 +34,7 @@ public class CombatManager : MonoBehaviour
                         Debug.Log("You have attacked: " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
+                        unit.GetComponent<Animator>().Play("Attack");
 
                     } else {
                         Debug.Log("You have attacked an invalid target");
@@ -43,6 +47,7 @@ public class CombatManager : MonoBehaviour
                         Debug.Log("You have attacked: " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
+                        unit.GetComponent<Animator>().Play("Attack");
 
                     } else {
                         Debug.Log("You have attacked an invalid target");
