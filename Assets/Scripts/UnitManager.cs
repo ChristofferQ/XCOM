@@ -16,6 +16,7 @@ public class UnitManager : MonoBehaviour
     public List<GameObject> PlayerUnits = new List<GameObject>();
     public List<GameObject> EnemyUnits = new List<GameObject>();
     private static List<Tile> OccupiedTiles2 = new List<Tile>();
+    private static List<Tile> Selected = new List<Tile>();
    
     void Awake()
     {
@@ -66,18 +67,18 @@ public class UnitManager : MonoBehaviour
     public void DisplayUnitTile(Vector2 pos) {
         CleanUnitTiles();
         int size = 0;
-        OccupiedTiles.Add(GridManager.Instance.GetTileAtPosition(pos));
+        Selected.Add(GridManager.Instance.GetTileAtPosition(pos));
         while (size < 1)
         {
-            foreach (Tile tile in OccupiedTiles.ToList() )
+            foreach (Tile tile in Selected.ToList() )
             {
                 Vector2 tilePos = GridManager.Instance.GetCoordinateFromWorldPos(tile.transform.position);
                 var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
-                OccupiedTiles.Add(unitTile);
+                Selected.Add(unitTile);
             }
             size++;
         }
-        foreach (Tile tile in OccupiedTiles.ToList())
+        foreach (Tile tile in Selected.ToList())
             {
                 tile.unitHighlight.SetActive(true);
             }
@@ -106,6 +107,7 @@ public class UnitManager : MonoBehaviour
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos.x, tilePos.y));
             OccupiedTiles.Add(unitTile);
         }
+        
         foreach (Tile tile in OccupiedTiles.ToList())
         {
             tile.EnemyHighlight.SetActive(true);

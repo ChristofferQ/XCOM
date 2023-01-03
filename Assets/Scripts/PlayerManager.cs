@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
 
         showStatsBar(unit);
         var pos = GridManager.Instance.GetCoordinateFromWorldPos(this.selectedUnit.transform.position);
-        UnitManager.Instance.DisplayUnitTile(pos);
+        //UnitManager.Instance.DisplayUnitTile(pos);
         UnitManager.Instance.findAllUnits();
     }
 

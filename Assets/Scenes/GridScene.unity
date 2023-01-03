@@ -5619,6 +5619,14 @@ PrefabInstance:
       propertyPath: unit
       value: 
       objectReference: {fileID: 4102329636926666134, guid: 55c4af6381065134a8573a0c6cd72ed8, type: 3}
+    - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
+      propertyPath: herosToSpawn
+      value: 
+      objectReference: {fileID: 3753398720192024906, guid: a8c0f918022b75847b4943512e2b896a, type: 3}
+    - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
+      propertyPath: enemiesToSpawn
+      value: 
+      objectReference: {fileID: 6972650927067331867, guid: d5ece684da580db48a29fa9d35c20097, type: 3}
     - target: {fileID: 6478486655877883995, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: m_RootOrder
       value: 5

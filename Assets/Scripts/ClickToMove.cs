@@ -46,11 +46,8 @@ public class ClickToMove : MonoBehaviour
                         unit.actionCount--;
                     }
                 }
-    
-                MovementManager.Instance.CleanMovementTiles();
-                UnitManager.Instance.CleanUnitTiles();
-                CombatManager.Instance.CleanCombatTiles();
 
+                PlayerManager.Instance.DeselectUnit();
             }
         }
         // If we are within stoppingDistance (defined in the navmeshagent component in the inspector), 
