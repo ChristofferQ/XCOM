@@ -151,6 +151,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 4785785688655244533}
+  potion: 20
   maxShield: 100
   currentShield: 0
   ShieldBar: {fileID: 655510502946036297}
