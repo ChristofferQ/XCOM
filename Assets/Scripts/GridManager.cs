@@ -8,7 +8,9 @@ public class GridManager : MonoBehaviour
   public int _width, _height, _depth;
   [SerializeField] private Tile _tilePrefab;
   [SerializeField] private GameObject wallPrefab;
-  [SerializeField] private GameObject propPrefab;
+  [SerializeField] private GameObject prop1;
+  [SerializeField] private GameObject prop2;
+  [SerializeField] private GameObject prop3;
 
   [SerializeField] private bool walls;
   [SerializeField] private bool props;
@@ -71,9 +73,11 @@ public class GridManager : MonoBehaviour
   {
     if (props == true)
     {
-      for(var i = 0; i < 10; i++)
+      for(var i = 0; i < 5; i++)
       {
-        var spawnedProp = Instantiate(propPrefab, new Vector3(Random.Range(0, _width),0.5f,Random.Range(0, _depth)), Quaternion.Euler(0,Random.Range(0,360),0));
+        var spawnedProp1 = Instantiate(prop1, new Vector3(Random.Range(0, _width),0.5f,Random.Range(0, _depth)), Quaternion.Euler(0,Random.Range(0,360),0));
+        var spawnedProp2 = Instantiate(prop2, new Vector3(Random.Range(0, _width),1,Random.Range(0, _depth)), Quaternion.Euler(0,Random.Range(0,360),0));
+        var spawnedProp3 = Instantiate(prop3, new Vector3(Random.Range(0, _width),0.5f,Random.Range(0, _depth)), Quaternion.identity);
       }
     }
   }

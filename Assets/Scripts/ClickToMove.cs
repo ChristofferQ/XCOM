@@ -25,7 +25,7 @@ public class ClickToMove : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 if (hit.collider.tag != "Tile") return;
-                Debug.Log(hit.collider.gameObject.name);
+                Debug.Log(PlayerManager.Instance.selectedUnit.GetComponent<Unit>().name + " moved to " + hit.collider.gameObject.name);
 
                 // Jesper made this, but it doesn't really do anything we wanted, delete it soon^tm
                 //if (navMeshAgent.isStopped = false) return; // Already moving!  
