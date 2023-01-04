@@ -90,7 +90,7 @@ public class Unit : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            Debug.Log(GetComponent<Unit>().name + " is Dead!");
+            Debug.Log(GetComponent<Unit>().name + " was killed");
             gameObject.SetActive(false);
         }
         CombatManager.Instance.CheckGameOver();

@@ -35,8 +35,8 @@ public class CombatManager : MonoBehaviour
                     if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "EnemyUnit"))
                     {
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log("You have attacked: " + hit.collider.gameObject.name);
-                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(100);
+                        Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
+                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
                         
@@ -54,7 +54,7 @@ public class CombatManager : MonoBehaviour
                     if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "PlayerUnit"))
                     {
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log("You have attacked: " + hit.collider.gameObject.name);
+                        Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
@@ -101,6 +101,7 @@ public class CombatManager : MonoBehaviour
             {
                 //Make Units attackle and show their healthbars
                 if (hitCollider.tag == "Tile") continue;
+                if (hitCollider.tag == "Prop") continue;
                 else if (hitCollider.tag == "Chest")
                 {
                     Debug.Log("Chest in range");

@@ -5707,6 +5707,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1157190881892043758, guid: 2110ba875271b104da76474d9a547c4e, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: prop1
+      value: 
+      objectReference: {fileID: 5275652781249614370, guid: f638303a6555f7643be946e5cf3a00e2, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: prop2
+      value: 
+      objectReference: {fileID: 5129442236857904303, guid: 85fad792cda68e149b58c25f757adff9, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: prop3
+      value: 
+      objectReference: {fileID: 3713104444964819695, guid: 672b67c67872d2f4f9b79b7794cff5ec, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: props
       value: 0
       objectReference: {fileID: 0}
@@ -5725,7 +5737,7 @@ PrefabInstance:
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: propPrefab
       value: 
-      objectReference: {fileID: 5275652781249614370, guid: cfb04594231799d4092ee0064447ce94, type: 3}
+      objectReference: {fileID: 3713104444964819695, guid: 672b67c67872d2f4f9b79b7794cff5ec, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: wallPrefab
       value: 

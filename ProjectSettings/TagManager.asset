@@ -9,6 +9,7 @@ TagManager:
   - statsBar
   - Tile
   - Chest
+  - Prop
   layers:
   - Default
   - TransparentFX

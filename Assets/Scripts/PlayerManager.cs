@@ -82,10 +82,10 @@ public class PlayerManager : MonoBehaviour
             if(Physics.Raycast(ray, out hit)) {
                 if(hit.collider.tag == "PlayerUnit" && GameManager.Instance.gameState == GameState.HerosTurn && GameManager.Instance.gameState != GameState.EnemysTurn) {
                     SelectUnit(hit.transform.gameObject);
-                    Debug.Log(hit.collider.GetComponent<Unit>().name + " Selected");
+                    Debug.Log(hit.collider.GetComponent<Unit>().name + " selected");
                 } else if (hit.collider.tag == "EnemyUnit" && GameManager.Instance.gameState != GameState.HerosTurn && GameManager.Instance.gameState == GameState.EnemysTurn) {
                     SelectUnit(hit.transform.gameObject);
-                    Debug.Log(hit.collider.GetComponent<Unit>().name + " Selected");
+                    Debug.Log(hit.collider.GetComponent<Unit>().name + " selected");
                     
                 } else {
                 DeselectUnit();
