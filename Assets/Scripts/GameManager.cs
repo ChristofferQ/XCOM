@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
             case GameState.SpawnEnemies:
                 UnitManager.Instance.SpawnEnemies();
                 break;
+            case GameState.SpawnChests:
+                UnitManager.Instance.SpawnChests();
+                break;
             case GameState.HerosTurn:
                 UnitManager.Instance.HerosTurn();
                 theButton.GetComponent<Image>().color = Color.green;
@@ -53,6 +56,7 @@ public enum GameState
     GenerateGrid = 0,
     SpawnHeros = 1,
     SpawnEnemies = 2,
-    HerosTurn = 3,
-    EnemysTurn = 4
+    SpawnChests = 3,
+    HerosTurn = 4,
+    EnemysTurn = 5
 }

@@ -52,9 +52,15 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
-    public void PlayGame()
+    public void ResetGame()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        pauseMenu.SetActive(false);
+        hudMenu.SetActive(true);
+        timer.SetActive(true);
+        endTurnButton.SetActive(true);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void ResumeGame()

@@ -11,11 +11,15 @@ public class UnitManager : MonoBehaviour
     public int NumberOfHeros;
     public GameObject enemiesToSpawn;
     public int NumberOfEnemies;
+    public GameObject chestsToSpawn;
+    public int NumberOfChests;
     private static List<Tile> OccupiedTiles = new List<Tile>();
     public List<GameObject> AllUnits = new List<GameObject>();
     public List<GameObject> PlayerUnits = new List<GameObject>();
     public List<GameObject> EnemyUnits = new List<GameObject>();
+    public List<GameObject> Chests = new List<GameObject>();
     private static List<Tile> OccupiedTiles2 = new List<Tile>();
+    private static List<Tile> OccupiedTiles3 = new List<Tile>();
     private static List<Tile> Selected = new List<Tile>();
    
     void Awake()
@@ -35,6 +39,8 @@ public class UnitManager : MonoBehaviour
         GameManager.Instance.ChangeState(GameState.SpawnEnemies);
     }
 
+    
+
     public void SpawnEnemies()
     {
         for (int x = 0; x < NumberOfEnemies; x++)
@@ -42,6 +48,17 @@ public class UnitManager : MonoBehaviour
             Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width), 5, Random.Range(GridManager.Instance._depth,(GridManager.Instance._depth -5)));
             var Enemy =Instantiate(enemiesToSpawn, randomSpawnPosition, Quaternion.Euler(0,180f,0));
             Enemy.name = $"Enemy {x + 1}";
+        }  
+        
+        GameManager.Instance.ChangeState(GameState.SpawnChests);
+        Debug.Log(GameManager.Instance.gameState);
+    }
+    public void SpawnChests()
+    {
+        for (int x = 0; x < NumberOfChests; x++)
+        {
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width),1, Random.Range(5,(GridManager.Instance._depth -5)));
+            var Chest =Instantiate(chestsToSpawn, randomSpawnPosition, Quaternion.Euler(0,180f,0));
         }  
         
         GameManager.Instance.ChangeState(GameState.HerosTurn);
@@ -123,6 +140,18 @@ public class UnitManager : MonoBehaviour
          foreach (Tile tile in OccupiedTiles2.ToList())
         {
             tile.PlayerHighlight.SetActive(true);
+            tile.Occupied = true;
+        }
+        Chests.AddRange(GameObject.FindGameObjectsWithTag("Chest"));
+        foreach( var element in Chests.ToList()) {
+            if (!element) continue;
+            Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
+            var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
+            OccupiedTiles3.Add(unitTile);
+        }
+         foreach (Tile tile in OccupiedTiles3.ToList())
+        {
+            tile.unitHighlight.SetActive(true);
             tile.Occupied = true;
         }
         EnemyUnits.Clear();

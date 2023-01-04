@@ -36,6 +36,11 @@ public class CombatManager : MonoBehaviour
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
+                        
+
+                    }else if(hit.collider.gameObject.tag == "Chest")  
+                    {   
+                        Debug.Log("You have attacked a chest");
 
                     } else {
                         Debug.Log("You have attacked an invalid target");
@@ -50,12 +55,17 @@ public class CombatManager : MonoBehaviour
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
+                    
+                    }else if(hit.collider.gameObject.tag == "Chest")  
+                    {   
+                        Debug.Log("You have attacked a chest");
+                        //openChest();
+                    }
 
-                    } else {
+                    else {
                         Debug.Log("You have attacked an invalid target");
                     }
                 }
-            
             } else {
                 Debug.Log("No Target!");
             }
@@ -88,7 +98,10 @@ public class CombatManager : MonoBehaviour
             {
                 //Make Units attackle and show their healthbars
                 if (hitCollider.tag == "Tile") continue;
-                else 
+                else if (hitCollider.tag == "Chest")
+                {
+                    Debug.Log("Chest in range");
+                } else
                 {
                     hitCollider.GetComponent<Unit>().inCombatRange = true;
                     hitCollider.GetComponent<Unit>().stats.alpha = 1.0f;
