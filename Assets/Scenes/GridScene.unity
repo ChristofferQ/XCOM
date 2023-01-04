@@ -5719,6 +5719,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3713104444964819695, guid: 672b67c67872d2f4f9b79b7794cff5ec, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: prop4
+      value: 
+      objectReference: {fileID: 7030994941266997987, guid: 70b23d6bebf91b14d8dec5ddcbfa2a9d, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: props
       value: 1
       objectReference: {fileID: 0}
@@ -5734,6 +5738,14 @@ PrefabInstance:
       propertyPath: _width
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: wallprop1
+      value: 
+      objectReference: {fileID: 7030994941266997987, guid: 70b23d6bebf91b14d8dec5ddcbfa2a9d, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: wallprop2
+      value: 
+      objectReference: {fileID: 8583780524957933453, guid: 3f70e86548d7c1649b7b639544582e00, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: propPrefab
       value: 
