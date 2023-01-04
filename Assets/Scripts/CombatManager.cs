@@ -98,6 +98,7 @@ public class CombatManager : MonoBehaviour
             {
                 //Make Units attackle and show their healthbars
                 if (hitCollider.tag == "Tile") continue;
+                if (hitCollider.tag == "Prop") continue;
                 else if (hitCollider.tag == "Chest")
                 {
                     Debug.Log("Chest in range");

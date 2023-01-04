@@ -18,6 +18,7 @@ public class UnitManager : MonoBehaviour
     public List<GameObject> PlayerUnits = new List<GameObject>();
     public List<GameObject> EnemyUnits = new List<GameObject>();
     public List<GameObject> Chests = new List<GameObject>();
+    public List<GameObject> Props = new List<GameObject>();
     private static List<Tile> OccupiedTiles2 = new List<Tile>();
     private static List<Tile> OccupiedTiles3 = new List<Tile>();
     private static List<Tile> Selected = new List<Tile>();
@@ -144,6 +145,18 @@ public class UnitManager : MonoBehaviour
         }
         Chests.AddRange(GameObject.FindGameObjectsWithTag("Chest"));
         foreach( var element in Chests.ToList()) {
+            if (!element) continue;
+            Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
+            var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
+            OccupiedTiles3.Add(unitTile);
+        }
+         foreach (Tile tile in OccupiedTiles3.ToList())
+        {
+            tile.unitHighlight.SetActive(true);
+            tile.Occupied = true;
+        }
+        Props.AddRange(GameObject.FindGameObjectsWithTag("Prop"));
+        foreach( var element in Props.ToList()) {
             if (!element) continue;
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
