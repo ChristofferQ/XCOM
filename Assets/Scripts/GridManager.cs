@@ -8,6 +8,10 @@ public class GridManager : MonoBehaviour
   public int _width, _height, _depth;
   [SerializeField] private Tile _tilePrefab;
   [SerializeField] private GameObject wallPrefab;
+  [SerializeField] private GameObject propPrefab;
+
+  [SerializeField] private bool walls;
+  [SerializeField] private bool props;
 
   public static GridManager Instance;
 
@@ -25,23 +29,26 @@ public class GridManager : MonoBehaviour
     for (int x = 0; x < _width; x++) {
         for (int y = 0; y < _height; y++) {
           for (int z = 0; z < _depth; z++) {
-            //For creating walls
-            if (z == 0)
+            if(walls == true)
             {
-              var spawnedWall = Instantiate(wallPrefab, new Vector3(x,y+0.5f,z-0.5f), Quaternion.identity);
+              if (z == 0)
+              {
+                var spawnedWall = Instantiate(wallPrefab, new Vector3(x,y+0.5f,z-0.5f), Quaternion.identity);
+              }
+              if (z == _depth-1)
+              {
+                var spawnedWall = Instantiate(wallPrefab, new Vector3(x,y+0.5f,z+0.5f), Quaternion.Euler(0,180f,0));
+              }
+              if (x == 0)
+              {
+                var spawnedWall = Instantiate(wallPrefab, new Vector3(x-0.5F,y+0.5f,z), Quaternion.Euler(0,90f,0));
+              }
+              if (x == _width-1)
+              {
+                var spawnedWall = Instantiate(wallPrefab, new Vector3(x+0.5F,y+0.5f,z), Quaternion.Euler(0,-90f,0));
+              }
             }
-            if (z == _depth-1)
-            {
-              var spawnedWall = Instantiate(wallPrefab, new Vector3(x,y+0.5f,z+0.5f), Quaternion.Euler(0,180f,0));
-            }
-            if (x == 0)
-            {
-              var spawnedWall = Instantiate(wallPrefab, new Vector3(x-0.5F,y+0.5f,z), Quaternion.Euler(0,90f,0));
-            }
-            if (x == _width-1)
-            {
-              var spawnedWall = Instantiate(wallPrefab, new Vector3(x+0.5F,y+0.5f,z), Quaternion.Euler(0,-90f,0));
-            }
+
             var spawnedTile = Instantiate(_tilePrefab, new Vector3(x,y,z), Quaternion.identity);
             spawnedTile.name = $"Tile {x} {y} {z}";
 
@@ -49,14 +56,26 @@ public class GridManager : MonoBehaviour
             var isOffset = (x % 2 == 0 && z % 2 != 0) || (x % 2 != 0 && z % 2 == 0);
             spawnedTile.Init(isOffset);
 
-
             _tiles[new Vector2(x,z)] = spawnedTile;
             }   
         }
     }
+    spawnProps();
+
     //Add NavMesh
     UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
     GameManager.Instance.ChangeState(GameState.SpawnHeros);// Change to spawnheros    
+  }
+
+  private void spawnProps()
+  {
+    if (props == true)
+    {
+      for(var i = 0; i < 10; i++)
+      {
+        var spawnedProp = Instantiate(propPrefab, new Vector3(Random.Range(0, _width),0.5f,Random.Range(0, _depth)), Quaternion.Euler(0,Random.Range(0,360),0));
+      }
+    }
   }
 
   public Tile GetTileAtPosition(Vector2 pos) {
