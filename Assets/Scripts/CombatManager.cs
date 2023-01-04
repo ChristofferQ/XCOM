@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+
 
 public class CombatManager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class CombatManager : MonoBehaviour
     private List<GameObject> AliveEnemyUnits = new List<GameObject>();
 
     public Animator animator;
+    
 
     void Start() 
     {
@@ -33,7 +36,7 @@ public class CombatManager : MonoBehaviour
                     {
                         unit.transform.LookAt(hit.transform);
                         Debug.Log("You have attacked: " + hit.collider.gameObject.name);
-                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(100);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
                         
@@ -74,7 +77,7 @@ public class CombatManager : MonoBehaviour
 
         if(Input.GetKeyDown("f"))
         {
-            GameOver();
+            CheckGameOver();
         }
     }
 
@@ -234,7 +237,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void CheckGameOver()
     {
         AlivePlayerUnits.Clear();
         AliveEnemyUnits.Clear();
@@ -245,10 +248,12 @@ public class CombatManager : MonoBehaviour
         if(AlivePlayerUnits.Count == 0)
         {
             Debug.Log("Red wins!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
         if(AliveEnemyUnits.Count == 0)
         {
             Debug.Log("Green wins!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/GridScene.unity
     guid: 84d41d95133b5934593bff1e5630be72
   - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
+    path: Assets/Scenes/GreenGameOverScene.unity
     guid: 2ac08ac66ecabe241bc837bd18a6f130
+  - enabled: 1
+    path: Assets/Scenes/RedGameOverScene.unity
+    guid: e04f0bc0490015142872696ad15562b1
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 4e490bb0c96eb9f4f8173a2da539260e
-  - enabled: 1
-    path: Assets/Scenes/NewGame.unity
-    guid: b16bfa81b2cdc1642b43c3624c824685
   m_configObjects: {}

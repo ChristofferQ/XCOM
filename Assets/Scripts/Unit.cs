@@ -93,7 +93,7 @@ public class Unit : MonoBehaviour
             Debug.Log(GetComponent<Unit>().name + " is Dead!");
             gameObject.SetActive(false);
         }
-        CombatManager.Instance.GameOver();
+        CombatManager.Instance.CheckGameOver();
     }
 
     public void healing(int heal)

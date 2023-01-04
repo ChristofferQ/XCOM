@@ -5708,19 +5708,19 @@ PrefabInstance:
       objectReference: {fileID: 1157190881892043758, guid: 2110ba875271b104da76474d9a547c4e, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: props
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: walls
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: _depth
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: _width
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: propPrefab
@@ -5988,7 +5988,7 @@ PrefabInstance:
       objectReference: {fileID: 3753398720192024906, guid: a8c0f918022b75847b4943512e2b896a, type: 3}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: NumberOfHeros
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: chestsToSpawn
