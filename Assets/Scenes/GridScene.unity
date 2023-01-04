@@ -718,6 +718,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
+      propertyPath: limitMap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
       propertyPath: rotationSped
       value: 10
       objectReference: {fileID: 0}
@@ -5370,6 +5374,26 @@ PrefabInstance:
     - target: {fileID: 2407037683168762089, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 1157190881892043758, guid: 2110ba875271b104da76474d9a547c4e, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: _depth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: _width
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: wallPrefab
+      value: 
+      objectReference: {fileID: 5640697872690282080, guid: 20c2237445e5adf459bc016755ebd4f9, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: _tilePrefabEdge
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762091, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: m_Name
