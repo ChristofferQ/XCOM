@@ -1,0 +1,1586 @@
+fileFormatVersion: 2
+guid: f4912d2fed8aa3640ad808c47940bf2d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 541
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b43fc41599f75f418e7882df910f54e
+      internalID: 1152676179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 576
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e564e69ad1dab824f94574ff762faaa1
+      internalID: -1865087129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 567
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e4ed6554d595c4585d52b2e0f26ccf
+      internalID: 211199211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 567
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc576d9d3fc18cc47b43434bff83aae9
+      internalID: -1731950114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_4
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 567
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad683110bea51c4498205c99df31364
+      internalID: 79435940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 567
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b947938ffd22a2640b4d720af663ff02
+      internalID: 857123871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 539
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6294081c30c460d4e9b3dc655c21c826
+      internalID: 923917934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 539
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88df8e6ac18b7c447826b3a82f08bec8
+      internalID: -207792139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_8
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 539
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2871fa01fc8e947be2ebbf273b8042
+      internalID: -1710172645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 540
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a081464669f114149930d8f30185762b
+      internalID: 1539845993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_10
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 534
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2829242dfd6132e488be194f96c53d0f
+      internalID: 1212158748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 537
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa711bfb67937dd41b0ce2da435c53c7
+      internalID: 221858196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_12
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 537
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937b1d5316b40bc44ac2a6f90c1e0620
+      internalID: 981743760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_13
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 537
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb65a6c3b782e24c9923e0e914a6198
+      internalID: 1269425426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_14
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 537
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2586345d36dc146bb32390c38f3f8e
+      internalID: 828094236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_15
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 528
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f67b3e3118b8a9449d4e79c8cb18f58
+      internalID: -364281684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_16
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 532
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9082f2d356dbad9468d2215dccf9434c
+      internalID: -1578724846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_17
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 532
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae5c81ed60e09a4b8ec84383b9defa5
+      internalID: -457334998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_18
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 477
+        width: 184
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8218a68be21783d4fa8df97b2ecfd86a
+      internalID: -225168337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 492
+        width: 234
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc959706520709c4896247f9a4b7a4ce
+      internalID: 1534691252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 426
+        width: 214
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664a8ac187dd4ce4da70a77b57b1b9f0
+      internalID: 682197154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_21
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 406
+        width: 62
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcefeeaa7599354599eb24d7f9f0b4b
+      internalID: 1319953175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_22
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 404
+        width: 63
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843adedb8ca783a4aa8866091509ab29
+      internalID: -704013677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_23
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 427
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb6945892563864bbdfb9ba0e2d9c57
+      internalID: 1594616689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_24
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 375
+        width: 158
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fde2dafe1943c42b0fd95b1688ea51
+      internalID: 1671544211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_25
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 378
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba32f98b293fe94d943f7597567cd7f
+      internalID: 353898995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_26
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 324
+        width: 208
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3d5395d2044a548b6ebd3bc809daa7
+      internalID: 1413967185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 351
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6744322f79bf1c5448580d5d86003a01
+      internalID: -91394059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_28
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 351
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce6a83d4bf8b484395ce9160e77656c
+      internalID: 1073058337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_29
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 351
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d46ff41c8bad514d97602b8982dab57
+      internalID: -49490201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_30
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 351
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c26ef843df49874ca83eb5abcb2f806
+      internalID: -1472642214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_31
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 351
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a68e896996282d478e113fe809e1124
+      internalID: -105797477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_32
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 351
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a336c0c7ac39c8e4782ea34466c9f6f8
+      internalID: 1806404149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_33
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 318
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392ad298afa1378478cb87f4d76f193c
+      internalID: 861942443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_34
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 346
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b8bb0012f1c5841ab4eab3084a0034
+      internalID: 1042753431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_35
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 329
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ad6fe5ed95b374ea998411b512ebfe
+      internalID: -500468700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_36
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 329
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988f5ce67bbcf9943ab6e5b3b585a86f
+      internalID: 1329057790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_37
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 329
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46034b46c9654bb49858da326e2bdd32
+      internalID: -1131905397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_38
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 329
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7085c97c013ce4694694ee8503766b
+      internalID: -134119072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_39
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 329
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba173b76e898ccc45b13b3898b66d105
+      internalID: 1924163712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_40
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 329
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920935e703e476f47a868af393e3cabb
+      internalID: 162102967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_41
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 233
+        width: 85
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af51c8f1ad730843a0c92c9890aa497
+      internalID: 1729405541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_42
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 235
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8fa145e55f02643bc27aa975198308
+      internalID: -659346262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_43
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 262
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6fcb883e66f9743b2842938e18e5fc
+      internalID: -1337628675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_44
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 272
+        width: 55
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d110fc272333f4bb26ebdd8588934f
+      internalID: 1803635940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_45
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 291
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16b74b9d4740064695cedf6ae8be509
+      internalID: 1906129914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_46
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 229
+        width: 215
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1cd6b71ec1ebd4abd57b6840c904c6
+      internalID: 520773100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_47
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 179
+        width: 160
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16202c4e8f09cf541a21269ebf7fedee
+      internalID: 912250379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_48
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 181
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82052a852ee3996479735fafd3ac1fea
+      internalID: -1896827828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_49
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 187
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b9e4e23f8de66459b992c80ad2d698
+      internalID: -1023205002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_50
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 208
+        width: 221
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1b04074da357349ba3aadca57a9c4d
+      internalID: -1086086230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbc85d9d00cd624dbb450ee485ace41
+      internalID: 1792586681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_52
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f3f864c9e3940499010358aecb563a
+      internalID: -59527137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_53
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111c1789debaf04419e9d4cf45312ab3
+      internalID: -2121600199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_54
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 105
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4e6593920fc284f96c27b7de858fd7
+      internalID: 422965351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_55
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 124
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1496deba98c314191ffff71a86defe
+      internalID: 940214618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_56
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 120
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa709f3f94e76a41943482b5172dadd
+      internalID: -1106021251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_57
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 138
+        width: 143
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdd01fc6df4bcb44adea7b83a8f1511
+      internalID: 924047895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_58
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 147
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2a55783b66f5646abb49de0e14e8ed
+      internalID: 1151669616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_59
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 82
+        width: 157
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2498f51bfbcd62d4188992ab49be01da
+      internalID: 300060084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_60
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 101
+        width: 128
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a468d3d28ea094884e7f3396fa9285
+      internalID: 59866388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_61
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 28
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909ca8008c2e96c43957dcd7f122d00c
+      internalID: -2013348707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_62
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 28
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b788dd52a680be448e83430b6abd4e6
+      internalID: 91788579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_63
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 66
+        width: 128
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390eaf0c3fba6794dac222588fa442e5
+      internalID: 1706831293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_64
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 67
+        width: 128
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324e23116d88a594ab4c49a0125645b7
+      internalID: 107929754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_65
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 28
+        width: 44
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cfda922859a6c4b917aa152dc59273
+      internalID: 2042685745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_23: 1594616689
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_59: 300060084
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_7: -207792139
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_41: 1729405541
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_14: 828094236
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_60: 59866388
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_33: 861942443
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_25: 353898995
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_17: -457334998
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_61: -2013348707
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_42: -659346262
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_57: 924047895
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_51: 1792586681
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_19: 1534691252
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_29: -49490201
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_13: 1269425426
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_62: 91788579
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_40: 162102967
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_20: 682197154
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_8: -1710172645
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_63: 1706831293
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_21: 1319953175
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_12: 981743760
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_49: -1023205002
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_47: 912250379
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_38: -134119072
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_28: 1073058337
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_24: 1671544211
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_15: -364281684
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_54: 422965351
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_6: 923917934
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_55: 940214618
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_4: 79435940
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_56: -1106021251
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_52: -59527137
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_44: 1803635940
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_65: 2042685745
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_30: -1472642214
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_26: 1413967185
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_32: 1806404149
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_45: 1906129914
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_1: -1865087129
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_3: -1731950114
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_5: 857123871
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_50: -1086086230
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_11: 221858196
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_31: -105797477
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_10: 1212158748
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_18: -225168337
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_16: -1578724846
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_35: -500468700
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_22: -704013677
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_36: 1329057790
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_39: 1924163712
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_48: -1896827828
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_9: 1539845993
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_27: -91394059
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_0: 1152676179
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_2: 211199211
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_37: -1131905397
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_46: 520773100
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_43: -1337628675
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_58: 1151669616
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_53: -2121600199
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_34: 1042753431
+      kisspng-game-user-interface-design-button-interaction-desi-game-ui-button-interactive-design-5a6af1340e1451.3202242715169580040577_64: 107929754
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
