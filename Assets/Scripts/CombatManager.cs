@@ -31,6 +31,7 @@ public class CombatManager : MonoBehaviour
                     var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
                     if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "EnemyUnit"))
                     {
+                        unit.transform.LookAt(hit.transform);
                         Debug.Log("You have attacked: " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
@@ -44,6 +45,7 @@ public class CombatManager : MonoBehaviour
                     var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
                     if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "PlayerUnit"))
                     {
+                        unit.transform.LookAt(hit.transform);
                         Debug.Log("You have attacked: " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
                         unit.actionCount--;
