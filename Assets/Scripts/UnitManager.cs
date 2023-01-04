@@ -133,6 +133,7 @@ public class UnitManager : MonoBehaviour
         {
             tile.EnemyHighlight.SetActive(true);
             tile.Occupied = true;
+            tile.Walkable = false;
         }
         PlayerUnits.AddRange(GameObject.FindGameObjectsWithTag("PlayerUnit"));
         foreach( var element in PlayerUnits.ToList()) {
@@ -145,6 +146,7 @@ public class UnitManager : MonoBehaviour
         {
             tile.PlayerHighlight.SetActive(true);
             tile.Occupied = true;
+            tile.Walkable = false;
         }
         Chests.AddRange(GameObject.FindGameObjectsWithTag("Chest"));
         foreach( var element in Chests.ToList()) {
