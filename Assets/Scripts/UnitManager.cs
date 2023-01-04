@@ -108,13 +108,16 @@ public class UnitManager : MonoBehaviour
         foreach (Tile tile in OccupiedTiles) {
             tile.EnemyHighlight.SetActive(false);
             tile.Occupied = false;
+            tile.Walkable = true;
         }
         foreach (Tile tile in OccupiedTiles2) {
             tile.PlayerHighlight.SetActive(false);
             tile.Occupied = false;
+            tile.Walkable = true;
         }
         OccupiedTiles.Clear();
         OccupiedTiles2.Clear();
+        OccupiedTiles3.Clear();
     }
 
     public void findAllUnits() {
@@ -154,6 +157,7 @@ public class UnitManager : MonoBehaviour
         {
             tile.unitHighlight.SetActive(true);
             tile.Occupied = true;
+            tile.Walkable = false;
         }
         Props.AddRange(GameObject.FindGameObjectsWithTag("Prop"));
         foreach( var element in Props.ToList()) {
@@ -166,6 +170,7 @@ public class UnitManager : MonoBehaviour
         {
             tile.unitHighlight.SetActive(true);
             tile.Occupied = true;
+            tile.Walkable = false;
         }
         EnemyUnits.Clear();
         PlayerUnits.Clear();
