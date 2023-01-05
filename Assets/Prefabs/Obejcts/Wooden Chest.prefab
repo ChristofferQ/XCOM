@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23473552624965404}
   m_Layer: 0
   m_Name: chest_wooden_5
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 23457633136154308}
   m_Layer: 0
   m_Name: chest_wooden_4
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 23749974487126636}
   m_Layer: 0
   m_Name: chest_wooden_3
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 95964531805101434}
   m_Layer: 0
   m_Name: chest_wooden
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 4090485074951322}
   - component: {fileID: 4887109025839360389}
   - component: {fileID: 8579876830547747370}
+  - component: {fileID: 5140190588344805633}
   m_Layer: 0
   m_Name: Wooden Chest
   m_TagString: Chest
@@ -383,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 1632052825836748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4922331647626204}
@@ -401,8 +402,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0875357, y: 0.59217066, z: 0.76746726}
-  m_Center: {x: -0.0024181008, y: 0.37079552, z: -0.0007338524}
+  m_Size: {x: 1.0875357, y: 0.5921707, z: 0.73038495}
+  m_Center: {x: -0.002418086, y: 0.37079558, z: -0.019275583}
 --- !u!54 &8579876830547747370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -419,6 +420,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5140190588344805633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632052825836748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb4da11448af9c449c964a88db288fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilitys: []
+  moveAb: {fileID: 21300000, guid: b764dd811dfc6d94c85b0229f32aebb0, type: 3}
+  attackAb: {fileID: 21300000, guid: 91cc1dfa3669b164485fe6ab11acd1a3, type: 3}
+  shieldAb: {fileID: 21300000, guid: 0a9c3ae9c17b7414eb53f3169b4eedd6, type: 3}
 --- !u!1 &1902644749702062
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +449,7 @@ GameObject:
   - component: {fileID: 23172618222647504}
   m_Layer: 0
   m_Name: chest_wooden_2
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -20,8 +20,8 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
-  m_AmbientEquatorColor: {r: 0.013082937, g: 0.01655392, b: 0.01886791, a: 1}
+  m_AmbientSkyColor: {r: 0.023529412, g: 0.023529412, b: 0.023529412, a: 1}
+  m_AmbientEquatorColor: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
@@ -6020,7 +6020,7 @@ PrefabInstance:
       objectReference: {fileID: 1632052825836748, guid: e6fd1715965d63043a413dea8f583622, type: 3}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: NumberOfChests
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: enemiesToSpawn

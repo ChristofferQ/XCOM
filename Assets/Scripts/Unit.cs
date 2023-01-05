@@ -22,6 +22,9 @@ public class Unit : MonoBehaviour
     public int actionCount = 2;
     public int numOfActions;
 
+    public bool attackPowerUp = false;
+    public bool movePowerUp = false;
+
     Animator animator;
 
     public Image[] actions;
