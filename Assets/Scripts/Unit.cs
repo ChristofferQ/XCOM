@@ -22,6 +22,8 @@ public class Unit : MonoBehaviour
     public int actionCount = 2;
     public int numOfActions;
 
+    public bool isEnhanced;
+
     Animator animator;
 
     public Image[] actions;

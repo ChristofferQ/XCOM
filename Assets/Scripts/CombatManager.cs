@@ -44,6 +44,7 @@ public class CombatManager : MonoBehaviour
                     }else if(hit.collider.gameObject.tag == "Chest")  
                     {   
                         Debug.Log("You have attacked a chest");
+                        hit.collider.gameObject.GetComponent<Chest>().openChest(unit);
 
                     } else {
                         Debug.Log("You have attacked an invalid target");
@@ -62,7 +63,7 @@ public class CombatManager : MonoBehaviour
                     }else if(hit.collider.gameObject.tag == "Chest")  
                     {   
                         Debug.Log("You have attacked a chest");
-                        //openChest();
+                        hit.collider.gameObject.GetComponent<Chest>().openChest(unit);
                     }
 
                     else {

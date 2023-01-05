@@ -1048,7 +1048,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2261437236481287584, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2214875964113272472, guid: 17d71330467641949af7069e93b060fe, type: 3}
       propertyPath: m_PresetInfoIsWorld
