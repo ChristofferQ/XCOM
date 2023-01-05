@@ -20,12 +20,12 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
+  m_AmbientEquatorColor: {r: 0.013082937, g: 0.01655392, b: 0.01886791, a: 1}
+  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_AmbientMode: 1
+  m_SubtractiveShadowColor: {r: 0.093004614, g: 0.09338244, b: 0.09433961, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3692,7 +3692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1254139294
 Light:
   m_ObjectHideFlags: 0
@@ -5719,21 +5719,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3713104444964819695, guid: 672b67c67872d2f4f9b79b7794cff5ec, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: prop4
+      value: 
+      objectReference: {fileID: 7030994941266997987, guid: 70b23d6bebf91b14d8dec5ddcbfa2a9d, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: props
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: walls
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: _depth
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: _width
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: wallprop1
+      value: 
+      objectReference: {fileID: 7030994941266997987, guid: 70b23d6bebf91b14d8dec5ddcbfa2a9d, type: 3}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: wallprop2
+      value: 
+      objectReference: {fileID: 8583780524957933453, guid: 3f70e86548d7c1649b7b639544582e00, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: propPrefab
       value: 
@@ -6000,7 +6012,7 @@ PrefabInstance:
       objectReference: {fileID: 3753398720192024906, guid: a8c0f918022b75847b4943512e2b896a, type: 3}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: NumberOfHeros
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: chestsToSpawn
@@ -6016,7 +6028,7 @@ PrefabInstance:
       objectReference: {fileID: 6972650927067331867, guid: d5ece684da580db48a29fa9d35c20097, type: 3}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: NumberOfEnemies
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6478486655877883995, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: m_RootOrder

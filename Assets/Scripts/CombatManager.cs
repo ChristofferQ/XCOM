@@ -100,8 +100,8 @@ public class CombatManager : MonoBehaviour
             foreach(Collider hitCollider in hitColliders)
             {
                 //Make Units attackle and show their healthbars
-                if (hitCollider.tag == "Tile") continue;
-                if (hitCollider.tag == "Prop") continue;
+                if ((hitCollider.tag == "Tile" || (hitCollider.tag == "Prop") || (hitCollider.tag == "WallProp") )) continue;
+                //if (hitCollider.tag == "Prop") continue;
                 else if (hitCollider.tag == "Chest")
                 {
                     Debug.Log("Chest in range");

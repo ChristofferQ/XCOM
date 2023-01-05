@@ -10,6 +10,7 @@ TagManager:
   - Tile
   - Chest
   - Prop
+  - WallProp
   layers:
   - Default
   - TransparentFX

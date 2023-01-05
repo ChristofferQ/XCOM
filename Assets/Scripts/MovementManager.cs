@@ -37,6 +37,7 @@ public class MovementManager : MonoBehaviour
     public void SetMovementTiles(Vector2 pos, int movement)
     {
         CombatManager.Instance.CleanCombatTiles();
+        UnitManager.Instance.findAllUnits();
         Dictionary<Vector2, Tile> tiles = GridManager.Instance._tiles;
         int moveCount = 0;
         //select tiles in range
