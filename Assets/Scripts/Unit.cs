@@ -82,7 +82,7 @@ public class Unit : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if (currentShield == 0 && currentHealth > 0)
+        if (currentShield <= 0 && currentHealth > 0)
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);

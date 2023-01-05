@@ -181,5 +181,7 @@ public class UnitManager : MonoBehaviour
         }
         EnemyUnits.Clear();
         PlayerUnits.Clear();
+        Chests.Clear();
+        Props.Clear();
     }
 }

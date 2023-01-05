@@ -36,7 +36,9 @@ public class CombatManager : MonoBehaviour
                     {
                         unit.transform.LookAt(hit.transform);
                         Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
-                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+                        int attackRoll = Random.Range(10,20);
+                        Debug.Log(unit.name + ": Attack Roll = " + attackRoll);
+                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(attackRoll);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
                         
@@ -60,7 +62,9 @@ public class CombatManager : MonoBehaviour
                     {
                         unit.transform.LookAt(hit.transform);
                         Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
-                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(20);
+                        int attackRoll = Random.Range(10,20);
+                        Debug.Log(unit.name + ": Attack Roll = " + attackRoll);
+                        hit.collider.gameObject.GetComponent<Unit>().TakeDamage(attackRoll);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
                     
