@@ -675,6 +675,8 @@ MonoBehaviour:
   attackRange: 1
   actionCount: 2
   numOfActions: 2
+  attackPowerUp: 0
+  movePowerUp: 0
   actions:
   - {fileID: 9112233837218268265}
   - {fileID: 4124040935945931979}
@@ -694,7 +696,7 @@ GameObject:
   - component: {fileID: 3753398720195140664}
   m_Layer: 0
   m_Name: WK_HeavyIntantry
-  m_TagString: Untagged
+  m_TagString: PlayerUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
