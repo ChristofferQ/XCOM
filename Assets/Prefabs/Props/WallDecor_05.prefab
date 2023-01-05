@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1437140532329839207}
   m_Layer: 0
   m_Name: WallDecor_05
-  m_TagString: Prop
+  m_TagString: WallProp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -79,9 +79,9 @@ public class GridManager : MonoBehaviour
       {
         var spawnedProp1 = Instantiate(prop1, new Vector3(Random.Range(0, _width),0.5f,Random.Range(0, _depth)), Quaternion.Euler(0,Random.Range(0,360),0));
         var spawnedProp2 = Instantiate(prop2, new Vector3(Random.Range(0, _width),1,Random.Range(0, _depth)), Quaternion.Euler(0,Random.Range(0,360),0));
-        var spawnedProp3 = Instantiate(prop3, new Vector3(Random.Range(0, _width),0.5f,Random.Range(0, _depth)), Quaternion.identity);
+        var spawnedProp3 = Instantiate(prop3, new Vector3(Random.Range(1, _width -1),0.5f,Random.Range(5, _depth -5)), Quaternion.identity);
         var spawnedWallProp1 = Instantiate(wallprop1, new Vector3(Random.Range(0, _width),4,-0.5f), Quaternion.identity);
-        var spawnedWallProp2 = Instantiate(wallprop2, new Vector3(-0.46f,3.5f,Random.Range(0, _depth)), Quaternion.Euler(0,90,0));
+       // var spawnedWallProp2 = Instantiate(wallprop2, new Vector3(-0.46f,3.5f,Random.Range(0, _depth)), Quaternion.Euler(0,90,0));
       }
     }
   }
