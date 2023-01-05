@@ -6012,7 +6012,7 @@ PrefabInstance:
       objectReference: {fileID: 3753398720192024906, guid: a8c0f918022b75847b4943512e2b896a, type: 3}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: NumberOfHeros
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: chestsToSpawn
@@ -6028,7 +6028,7 @@ PrefabInstance:
       objectReference: {fileID: 6972650927067331867, guid: d5ece684da580db48a29fa9d35c20097, type: 3}
     - target: {fileID: 6478486655877883994, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: NumberOfEnemies
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6478486655877883995, guid: 05e3f65f2be49ae4b86b8a9c358ca661, type: 3}
       propertyPath: m_RootOrder
