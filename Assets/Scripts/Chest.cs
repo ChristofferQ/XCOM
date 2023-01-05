@@ -12,39 +12,35 @@ public class Chest : MonoBehaviour
     public Sprite attackAb;
     public Sprite shieldAb;
 
-    // Start is called before the first frame update
     void Awake()
     {
         Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void openChest(GameObject unit)
     {
-        unit = this;
-        int powerUpPick = Random.Range(1,4);
+        int powerUpPick = Random.Range(1,3);
         Debug.Log("her" + powerUpPick);
+        //var unitToPowerUp = unit;
 
         if (powerUpPick == 1)
         {
-            unit.Instance.isEnhanced = true;
-            abilitys[0].sprite = moveAb;
+            unit.GetComponent<Unit>().movePowerUp = true;
+            //abilitys[0].sprite = moveAb;
+            Debug.Log(unit.name + " got PowerUp " + powerUpPick);
+
         }
         if (powerUpPick == 2)
         {
-            unit.Instance.isEnhanced = true;
-            abilitys[1].sprite = attackAb;
+            unit.GetComponent<Unit>().attackPowerUp = true;
+            //abilitys[1].sprite = attackAb;
+            Debug.Log(unit.name + " got PowerUp " + powerUpPick);
         }
-        if (powerUpPick == 2)
+/*         if (powerUpPick == 2)
         {
             unit.Instance.isEnhanced = true;
             abilitys[2].sprite = shieldAb;
-        }
+        } */
         
     }
 }
