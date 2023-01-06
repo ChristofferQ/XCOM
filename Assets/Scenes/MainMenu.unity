@@ -711,6 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 0}
   props: {fileID: 952453183}
+  walls: {fileID: 188684625}
 --- !u!114 &111403050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,7 +1147,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 111403049}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onWalls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &225118004
 GameObject:
@@ -4887,6 +4900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 3753346635665315742, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
   props: {fileID: 0}
+  walls: {fileID: 0}
 --- !u!114 &1319965775
 MonoBehaviour:
   m_ObjectHideFlags: 0

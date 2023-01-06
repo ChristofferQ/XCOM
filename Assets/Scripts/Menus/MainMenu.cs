@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     public GameObject gameTimer;
     public Toggle props;
     public Toggle walls;
-    public Input heros;
 
     public void PlayGame()
     {
