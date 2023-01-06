@@ -34,10 +34,18 @@ public class CombatManager : MonoBehaviour
                     var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
                     if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "EnemyUnit"))
                     {
+                        int attackRoll;
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
-                        int attackRoll = Random.Range(10,20);
-                        Debug.Log(unit.name + ": Attack Roll = " + attackRoll);
+                        //Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
+                        if (unit.attackPowerUp == true)
+                        {
+                            attackRoll = Random.Range(20,30);
+
+                        } else {
+                            attackRoll = Random.Range(10,20);
+                        }
+                        //int attackRoll = Random.Range(10,20);
+                        Debug.Log(unit.name + " dealt " + attackRoll + " damage to " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(attackRoll);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
@@ -46,9 +54,9 @@ public class CombatManager : MonoBehaviour
                     }else if(hit.collider.gameObject.tag == "Chest")  
                     {   
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log("You have attacked a chest");
+                        //Debug.Log("You have attacked a chest");
                         hit.collider.gameObject.GetComponent<Chest>().openChest(unit.transform.gameObject);
-                        hit.collider.gameObject.SetActive(false);
+                        hit.collider.gameObject.GetComponent<Chest>().isOpen = true;
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
 
@@ -60,10 +68,17 @@ public class CombatManager : MonoBehaviour
                     var unit = PlayerManager.Instance.selectedUnit.GetComponent<Unit>();
                     if ((hit.collider.gameObject.GetComponent<Unit>()) && (hit.collider.gameObject.GetComponent<Unit>().inCombatRange == true) && (hit.collider.gameObject.GetComponent<Unit>().tag == "PlayerUnit"))
                     {
+                        int attackRoll;
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
-                        int attackRoll = Random.Range(10,20);
-                        Debug.Log(unit.name + ": Attack Roll = " + attackRoll);
+                        //Debug.Log(unit.name + " attacked " + hit.collider.gameObject.name);
+                        if (unit.attackPowerUp == true)
+                        {
+                            attackRoll = Random.Range(20,30);
+
+                        } else {
+                            attackRoll = Random.Range(10,20);
+                        }
+                        Debug.Log(unit.name + " dealt " + attackRoll + " damage to " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<Unit>().TakeDamage(attackRoll);
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
@@ -71,9 +86,9 @@ public class CombatManager : MonoBehaviour
                     }else if(hit.collider.gameObject.tag == "Chest")  
                     {   
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log("You have attacked a chest");
+                        //Debug.Log("You have attacked a chest");
                         hit.collider.gameObject.GetComponent<Chest>().openChest(unit.transform.gameObject);
-                        hit.collider.gameObject.SetActive(false);
+                        hit.collider.gameObject.GetComponent<Chest>().isOpen = true;
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
                     }
@@ -117,7 +132,7 @@ public class CombatManager : MonoBehaviour
                 //if (hitCollider.tag == "Prop") continue;
                 else if (hitCollider.tag == "Chest")
                 {
-                    Debug.Log("Chest in range");
+                    //Debug.Log("Chest in range");
                 } else
                 {
                     hitCollider.GetComponent<Unit>().inCombatRange = true;

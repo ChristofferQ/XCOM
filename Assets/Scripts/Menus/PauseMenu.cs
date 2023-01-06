@@ -42,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         screenLogger.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
+        PlayerManager.Instance.DeselectUnit();
     }
 
      public void AllHerosDead()

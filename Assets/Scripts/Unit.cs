@@ -24,6 +24,7 @@ public class Unit : MonoBehaviour
 
     public bool attackPowerUp = false;
     public bool movePowerUp = false;
+    public bool shieldPowerUp = false;
 
     Animator animator;
 
@@ -39,9 +40,9 @@ public class Unit : MonoBehaviour
     {
         Instance = this;
         currentHealth = maxHealth;
-        currentShield = maxShield;
+        currentShield = 0;
         healthBar.SetMaxHealth(maxHealth);
-        ShieldBar.SetMaxShield(maxShield);
+        ShieldBar.SetMaxShield(0);
 
         PlayerManager.AddUnit(this); 
 
