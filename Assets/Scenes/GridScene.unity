@@ -3917,6 +3917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 3753346635665315742, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
+  props: {fileID: 0}
 --- !u!1001 &1384610724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5708,6 +5709,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
+      propertyPath: pr
+      value: 
+      objectReference: {fileID: 1184490443620013259, guid: 5e3c98f2b41b9e6448e176f6e86bd47a, type: 3}
     - target: {fileID: 2407037683168762090, guid: 4febc3c347858a441ac0af4955540bdd, type: 3}
       propertyPath: wall
       value: 

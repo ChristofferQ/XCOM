@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private GameObject wallprop1;
     [SerializeField] private GameObject wallprop2;
 
-    [SerializeField] private bool walls;
+    [SerializeField] public static bool walls = true;
     [SerializeField] public static bool props = true;
 
     public static GridManager Instance;

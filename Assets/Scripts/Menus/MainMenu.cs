@@ -8,6 +8,9 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject gameTimer;
     public Toggle props;
+    public Toggle walls;
+    public Input heros;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -40,6 +43,20 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("off");
             GridManager.props = false;
+        }
+    }
+
+    public void onWalls()
+    {
+        if (walls.isOn)
+        {
+            Debug.Log("on");
+            GridManager.walls = true;
+        }
+        else
+        {
+            Debug.Log("off");
+            GridManager.walls = false;
         }
     }
     public void showGameTimer(bool tog)
