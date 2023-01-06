@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23473552624965404}
   m_Layer: 0
   m_Name: chest_wooden_5
-  m_TagString: Chest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 23457633136154308}
   m_Layer: 0
   m_Name: chest_wooden_4
-  m_TagString: Chest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 23749974487126636}
   m_Layer: 0
   m_Name: chest_wooden_3
-  m_TagString: Chest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 95964531805101434}
   m_Layer: 0
   m_Name: chest_wooden
-  m_TagString: Chest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 23172618222647504}
   m_Layer: 0
   m_Name: chest_wooden_2
-  m_TagString: Chest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         endTurnButton.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
+        PlayerManager.Instance.DeselectUnit();
     }
 
      public void AllHerosDead()

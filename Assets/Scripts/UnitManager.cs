@@ -157,6 +157,7 @@ public class UnitManager : MonoBehaviour
         foreach( var element in Chests.ToList()) {
             if (!element) continue;
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
+            Debug.Log(tilePos2 + element.name + "Check this out");
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
             OccupiedTiles3.Add(unitTile);
         }
