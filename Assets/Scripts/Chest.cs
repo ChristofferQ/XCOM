@@ -7,10 +7,6 @@ using UnityEngine.UI;
 public class Chest : MonoBehaviour
 {
     public static Chest Instance; 
-    public Image[] abilitys;
-    public Sprite moveAb;
-    public Sprite attackAb;
-    public Sprite shieldAb;
     public Animator animator;
 
     public bool isOpen = false;
@@ -30,14 +26,12 @@ public class Chest : MonoBehaviour
             if (powerUpPick == 1)
             {
                 unit.GetComponent<Unit>().movePowerUp = true;
-                //abilitys[0].sprite = moveAb;
                 unit.GetComponent<Unit>().movementSpeed = 5;
                 Debug.Log(unit.name + "'s movement was empowered");
             }
             if (powerUpPick == 2)
             {
                 unit.GetComponent<Unit>().attackPowerUp = true;
-                //abilitys[1].sprite = attackAb;
                 Debug.Log(unit.name + "'s attack was empowered");
             }
             if (powerUpPick == 3)
@@ -45,7 +39,6 @@ public class Chest : MonoBehaviour
                 unit.GetComponent<Unit>().shieldPowerUp = true;
                 unit.GetComponent<Unit>().currentShield = 100;
                 unit.GetComponent<Unit>().ShieldBar.SetMaxShield(100);
-                //abilitys[2].sprite = shieldAb;
                 Debug.Log(unit.name + " found a shield"); 
             }
         } else {
