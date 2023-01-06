@@ -58,7 +58,7 @@ public class UnitManager : MonoBehaviour
     {
         for (int x = 0; x < NumberOfChests; x++)
         {
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(0, GridManager.Instance._width),0.6f, Random.Range(5,(GridManager.Instance._depth -5)));
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(1, GridManager.Instance._width -1),0.6f, Random.Range(5,(GridManager.Instance._depth -5)));
             var Chest =Instantiate(chestsToSpawn, randomSpawnPosition, Quaternion.Euler(0,180f,0));
         }  
         
