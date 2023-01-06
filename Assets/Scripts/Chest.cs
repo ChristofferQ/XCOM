@@ -19,28 +19,27 @@ public class Chest : MonoBehaviour
 
     public void openChest(GameObject unit)
     {
-        int powerUpPick = Random.Range(1,3);
-        Debug.Log("her" + powerUpPick);
-        //var unitToPowerUp = unit;
-
+        int powerUpPick = Random.Range(1,4);
         if (powerUpPick == 1)
         {
             unit.GetComponent<Unit>().movePowerUp = true;
             //abilitys[0].sprite = moveAb;
-            Debug.Log(unit.name + " got PowerUp " + powerUpPick);
-
+            unit.GetComponent<Unit>().movementSpeed = 5;
+            Debug.Log(unit.name + "'s movement was empowered");
         }
         if (powerUpPick == 2)
         {
             unit.GetComponent<Unit>().attackPowerUp = true;
             //abilitys[1].sprite = attackAb;
-            Debug.Log(unit.name + " got PowerUp " + powerUpPick);
+            Debug.Log(unit.name + "'s attack was empowered");
         }
-/*         if (powerUpPick == 2)
+        if (powerUpPick == 3)
         {
-            unit.Instance.isEnhanced = true;
-            abilitys[2].sprite = shieldAb;
-        } */
-        
+            unit.GetComponent<Unit>().shieldPowerUp = true;
+            unit.GetComponent<Unit>().currentShield = 100;
+            unit.GetComponent<Unit>().ShieldBar.SetMaxShield(100);
+            //abilitys[2].sprite = shieldAb;
+            Debug.Log(unit.name + " found a shield"); 
+        } 
     }
 }
