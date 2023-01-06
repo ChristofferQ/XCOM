@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject hudMenu;
     public GameObject timer;
     public GameObject endTurnButton;
+    public GameObject screenLogger;
     public bool isPaused;
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         hudMenu.SetActive(false);
         timer.SetActive(false);
         endTurnButton.SetActive(false);
+        screenLogger.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
         PlayerManager.Instance.DeselectUnit();
@@ -70,6 +72,7 @@ public class PauseMenu : MonoBehaviour
         hudMenu.SetActive(true);
         timer.SetActive(true);
         endTurnButton.SetActive(true);
+        screenLogger.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }

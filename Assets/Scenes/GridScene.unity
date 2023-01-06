@@ -1337,6 +1337,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349018481}
   m_CullTransparentMesh: 1
+--- !u!1 &428162356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 101706, guid: e0aeafd6ca709b5449035c42f4e3879e, type: 3}
+  m_PrefabInstance: {fileID: 1384610724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &442242370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,6 +3796,7 @@ MonoBehaviour:
   hudMenu: {fileID: 271189271}
   timer: {fileID: 2059593903}
   endTurnButton: {fileID: 524393227}
+  screenLogger: {fileID: 428162356}
   isPaused: 0
 --- !u!1 &1365630776
 GameObject:
