@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance; 
 
     private static List<Unit> units = new List<Unit>();
+    private bool toggleBars;
 
     void Awake() 
     {
@@ -63,6 +64,7 @@ public class PlayerManager : MonoBehaviour
         MovementManager.Instance.CleanMovementTiles();
         UnitManager.Instance.CleanUnitTiles();
         CombatManager.Instance.CleanCombatTiles();
+        toggleBars = false;
         for(int i = 0; i < units.Count; i++)
         {
             if (!units[i]) continue;
@@ -120,6 +122,11 @@ public class PlayerManager : MonoBehaviour
         {
             SelectUnit(selectedUnit);
         }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            toggleBars = !toggleBars;
+            ShowAllStatsBar(selectedUnit);
+        }
         
     }
 
@@ -157,23 +164,31 @@ public class PlayerManager : MonoBehaviour
         this.selectedUnit.GetComponent<Unit>().stats.alpha = 1.0f;
     }
 
-    public void ShowAllStatsBar()
+    public void ShowAllStatsBar(GameObject unit)
     {
         
-        if (Input.GetKey(KeyCode.Tab))
+        if (toggleBars == true)
         {
             for(int i = 0; i < units.Count; i++)
-        {
-            if (!units[i]) continue;
-            units[i].stats.alpha = 1f;
+            {
+                if (!units[i]) continue;
+                units[i].stats.alpha = 1f;
+            }
         }
-        }else
+        if (toggleBars == false)
         {
             for(int i = 0; i < units.Count; i++)
+            {
+                if (!units[i]) continue;
+                units[i].stats.alpha = 0f;
+            }
+        }
+        showStatsBar(unit);
+        if (CombatManager.Instance.inCombat == true)
         {
-            if (!units[i]) continue;
-            units[i].stats.alpha = 0f;
+            CombatManager.Instance.performCombat();
         }
-        }
+        
+
     }
 }
