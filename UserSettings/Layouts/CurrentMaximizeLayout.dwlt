@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 1413
+  controlID: 12108
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 1326
+  controlID: 12047
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -380,7 +380,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
@@ -388,17 +388,17 @@ MonoBehaviour:
       layout: 4
   m_WindowGUID: 88d21f60f290ee34ba59057b5ba227cc
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 0
-  m_SceneIsLit: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.007192344, y: 0.60980743, z: -0.8002453}
+    m_Target: {x: 14.9973135, y: 0.8309899, z: 9.808407}
     speed: 2
-    m_Value: {x: 0.007192344, y: 0.60980743, z: -0.8002453}
+    m_Value: {x: 14.9973135, y: 0.8309899, z: 9.808407}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -445,13 +445,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.019265098, y: -0.9747543, z: 0.09269484, w: -0.20264226}
+    m_Target: {x: 0.28160977, y: 0.2790913, z: -0.08588805, w: 0.9141429}
     speed: 2
-    m_Value: {x: -0.019263431, y: -0.97466993, z: 0.09268682, w: -0.20262472}
+    m_Value: {x: 0.28157738, y: 0.2790592, z: -0.08587817, w: 0.91403776}
   m_Size:
-    m_Target: 0.58273923
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 0.58273923
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -495,8 +495,8 @@ MonoBehaviour:
     y: 486
     width: 908
     height: 461
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -665,8 +665,8 @@ MonoBehaviour:
     y: 0
     width: 306
     height: 947
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -705,7 +705,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e856f5ff32880000388800003a8800003c880000
+      m_ExpandedIDs: 2a59f5ff4459f5ff4e59f5ff0a5af5ff145af5ff1e5af5ff3ea2f5ff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -796,22 +796,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Obejcts
+    - Assets/LowPolyDungeonsLite/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Obejcts
+  - Assets/LowPolyDungeonsLite/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Christoffer\Documents\CPH Business\4. Semester\GameDev\XCOM
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 92630000
-    m_LastClickedID: 25490
-    m_ExpandedIDs: 000000005e63000060630000626300006463000066630000686300006a6300006c6300006e63000000ca9a3b
+    m_SelectedIDs: 42ef0000
+    m_LastClickedID: 61250
+    m_ExpandedIDs: 000000005e63000060630000626300006463000066630000686300006a6300006c6300006e63000088630000a463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -839,7 +839,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e63000060630000626300006463000066630000686300006a6300006c6300006e63000000ca9a3b
+    m_ExpandedIDs: 000000005e63000060630000626300006463000066630000686300006a6300006c6300006e63000088630000a463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -891,10 +891,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 609}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 125.333374
+  m_DirectoriesAreaWidth: 163
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52

@@ -157,12 +157,16 @@ public class UnitManager : MonoBehaviour
         foreach( var element in Chests.ToList()) {
             if (!element) continue;
             Vector2 tilePos2 = GridManager.Instance.GetCoordinateFromWorldPos(element.transform.position);
-            Debug.Log(tilePos2 + element.name + "Check this out");
             var unitTile = GridManager.Instance.GetTileAtPosition(new Vector2(tilePos2.x, tilePos2.y));
             OccupiedTiles3.Add(unitTile);
         }
          foreach (Tile tile in OccupiedTiles3.ToList())
         {
+            if (!tile.unitHighlight)
+            {
+                //Haven't found a solution to this yet. Game might crash if unit highlight is called on a wall segment or something I don't know.
+                Debug.Log("no Highligt" + tile.name );
+            } 
             tile.unitHighlight.SetActive(true);
             tile.Occupied = true;
             tile.Walkable = false;
