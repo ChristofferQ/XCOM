@@ -54,9 +54,9 @@ public class CombatManager : MonoBehaviour
                     }else if(hit.collider.gameObject.tag == "Chest")  
                     {   
                         unit.transform.LookAt(hit.transform);
-                        Debug.Log("You have attacked a chest");
+                        //Debug.Log("You have attacked a chest");
                         hit.collider.gameObject.GetComponent<Chest>().openChest(unit.transform.gameObject);
-                        hit.collider.gameObject.SetActive(false);
+                        hit.collider.gameObject.GetComponent<Chest>().isOpen = true;
                         unit.actionCount--;
                         unit.GetComponent<Animator>().Play("Attack");
 
