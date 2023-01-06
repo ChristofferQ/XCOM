@@ -53,9 +53,6 @@ public class Unit : MonoBehaviour
 
     void Update(){
 
-        //PlayerManager.Instance.ShowAllStatsBar();
-        //PlayerManager.Instance.showStatsBar(PlayerManager.Instance.selectedUnit);
-
         if (actionCount > numOfActions)
         {
             actionCount = numOfActions;    
