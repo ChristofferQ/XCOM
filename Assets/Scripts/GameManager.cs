@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameState gameState;
     public GameObject theButton;
     public GameObject theBackground;
+    public GameObject herosHudmenu;
+    public GameObject enemysHudmenu;
 
     void Awake()
     {
@@ -18,7 +20,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeState(GameState.GenerateGrid);
+        ChangeState(GameState.GenerateGrid); 
     }
 
     public void ChangeState(GameState newState)
@@ -42,11 +44,17 @@ public class GameManager : MonoBehaviour
                 UnitManager.Instance.HerosTurn();
                 theButton.GetComponent<Image>().color = Color.green;
                 theBackground.GetComponent<Image>().color = Color.green;
+                herosHudmenu.GetComponent<Image>().color = Color.green;
+                herosHudmenu.SetActive(true);
+                enemysHudmenu.SetActive(false);
                 break;
             case GameState.EnemysTurn:
                 UnitManager.Instance.EnemysTurn();
                 theButton.GetComponent<Image>().color = Color.red;
                 theBackground.GetComponent<Image>().color = Color.red;
+                enemysHudmenu.GetComponent<Image>().color = Color.red;
+                enemysHudmenu.SetActive(true);
+                herosHudmenu.SetActive(false);
                 break;
         }
     }

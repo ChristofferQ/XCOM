@@ -127,7 +127,6 @@ public class PlayerManager : MonoBehaviour
             toggleBars = !toggleBars;
             ShowAllStatsBar(selectedUnit);
         }
-        
     }
 
     public void end()
