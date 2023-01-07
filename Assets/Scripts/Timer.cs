@@ -46,7 +46,7 @@ public class Timer : MonoBehaviour
             timer -= Time.deltaTime;
             UpdateTimerDisplay(timer);
             
-        } else if (!countDown && timer < timeDuration)
+        } else if (!countDown)
         {
             timer += Time.deltaTime;
             UpdateTimerDisplay(timer);

@@ -5951,6 +5951,7 @@ MonoBehaviour:
   timer: {fileID: 2059593903}
   endTurnButton: {fileID: 524393227}
   screenLogger: {fileID: 428162356}
+  gameTimer: {fileID: 1628137457}
   isPaused: 0
 --- !u!1 &1365630776
 GameObject:
@@ -6862,6 +6863,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594354072}
   m_CullTransparentMesh: 1
+--- !u!1 &1628137457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3753346635665315742, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
+  m_PrefabInstance: {fileID: 3753346636976593291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1633430630
 GameObject:
   m_ObjectHideFlags: 0
@@ -8962,7 +8968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3753346635665315742, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c4d0dc6a9ee4a4dadc99b9b613733b, type: 3}
