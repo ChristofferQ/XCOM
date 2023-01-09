@@ -98,7 +98,7 @@ public class PlayerManager : MonoBehaviour
 
         //HotKeys for our HUD buttons
 
-        if (Input.GetKeyDown("space")) 
+        if (Input.GetKeyDown("space") && PauseMenu.Instance.isPaused == false) 
         {
             end();
         }

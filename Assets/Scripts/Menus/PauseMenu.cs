@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu Instance;
     public GameObject pauseMenu;
-    public GameObject hudMenu;
+    public CanvasGroup HerosHudMenu;
+    public CanvasGroup EnemysHudMenu;
     public GameObject timer;
     public GameObject endTurnButton;
-    public GameObject screenLogger;
-    public GameObject gameTimer;
+    public CanvasGroup logToggle;
+    public GameObject log;
+    public CanvasGroup gameTimerToggle;
+    public CanvasGroup gameTimer;
     public bool isPaused;
+
+    void Awake()
+    {
+        Instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +39,7 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 PauseGame();
+                
             }
         }
     }
@@ -37,11 +47,13 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
-        hudMenu.SetActive(false);
+        HerosHudMenu.alpha = 0f;
+        EnemysHudMenu.alpha = 0f;
+        logToggle.alpha = 0f;
+        gameTimerToggle.alpha = 0f;
+        log.SetActive(false);
         timer.SetActive(false);
         endTurnButton.SetActive(false);
-        screenLogger.SetActive(false);
-        gameTimer.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
         PlayerManager.Instance.DeselectUnit();
@@ -61,7 +73,6 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         pauseMenu.SetActive(false);
-        hudMenu.SetActive(true);
         timer.SetActive(true);
         endTurnButton.SetActive(true);
         Time.timeScale = 1f;
@@ -71,11 +82,13 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        hudMenu.SetActive(true);
+        HerosHudMenu.alpha = 1f;
+        EnemysHudMenu.alpha = 1f;
+        logToggle.alpha = 1f;
+        log.SetActive(true);
+        gameTimerToggle.alpha = 1f;
         timer.SetActive(true);
         endTurnButton.SetActive(true);
-        screenLogger.SetActive(true);
-        gameTimer.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -84,6 +97,30 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void showGameTimer(bool tog)
+    {
+        if (tog == true)
+        {
+            gameTimer.alpha = 1f;
+        }
+        else
+        {
+            gameTimer.alpha = 0f;
+        }
+    }
+
+    public void showScreenLogger(bool tog)
+    {
+        if (tog == true)
+        {
+            AClockworkBerry.ScreenLogger.ShowLog = true;
+        }
+        else
+        {
+           AClockworkBerry.ScreenLogger.ShowLog = false;
+        }
     }
 
     public void QuitGame()

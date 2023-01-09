@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2407037683168762089}
   - component: {fileID: 2407037683168762090}
+  - component: {fileID: 3084766625896567380}
   m_Layer: 0
   m_Name: GridManager
   m_TagString: Untagged
@@ -48,3 +49,28 @@ MonoBehaviour:
   _height: 1
   _depth: 20
   _tilePrefab: {fileID: 8317250213733901717, guid: e890fe753f75d944385b69f43572534c, type: 3}
+  wallPrefab: {fileID: 0}
+  prop1: {fileID: 0}
+  prop2: {fileID: 0}
+  prop3: {fileID: 0}
+  wallprop1: {fileID: 0}
+  wallprop2: {fileID: 0}
+--- !u!114 &3084766625896567380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2407037683168762091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dc853095cf82545a768b9c8088c749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  hudMenu: {fileID: 0}
+  timer: {fileID: 0}
+  endTurnButton: {fileID: 0}
+  screenLogger: {fileID: 0}
+  gameTimer: {fileID: 0}
+  isPaused: 0

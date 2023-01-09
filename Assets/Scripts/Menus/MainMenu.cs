@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject gameTimer;
+    //public GameObject gameTimer;
     public Toggle props;
     public Toggle walls;
 
@@ -58,15 +58,5 @@ public class MainMenu : MonoBehaviour
             GridManager.walls = false;
         }
     }
-    public void showGameTimer(bool tog)
-    {
-        if (tog == true)
-        {
-            gameTimer.SetActive(true);
-        }
-        else
-        {
-            gameTimer.SetActive(false);
-        }
-    }
+    
 }

@@ -10,7 +10,7 @@ namespace AClockworkBerry
     {
         public static bool IsPersistent = true;
 
-        private static ScreenLogger instance;
+        public static ScreenLogger instance;
         private static bool instantiated = false;
 
         class LogMessage
@@ -33,7 +33,7 @@ namespace AClockworkBerry
             BottomRight
         }
 
-        public bool ShowLog = true;
+        public static bool ShowLog = true;
         public bool ShowInEditor = true;
 
 
