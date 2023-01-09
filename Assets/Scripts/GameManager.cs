@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameState gameState;
     public GameObject theButton;
     public GameObject theBackground;
+    public GameObject HudMenus;
     public GameObject herosHudmenu;
     public GameObject enemysHudmenu;
 
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
                 UnitManager.Instance.HerosTurn();
                 theButton.GetComponent<Image>().color = Color.green;
                 theBackground.GetComponent<Image>().color = Color.green;
-                herosHudmenu.GetComponent<Image>().color = Color.green;
+                HudMenus.GetComponent<Image>().color = Color.green;
                 herosHudmenu.SetActive(true);
                 enemysHudmenu.SetActive(false);
                 break;
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
                 UnitManager.Instance.EnemysTurn();
                 theButton.GetComponent<Image>().color = Color.red;
                 theBackground.GetComponent<Image>().color = Color.red;
-                enemysHudmenu.GetComponent<Image>().color = Color.red;
+                HudMenus.GetComponent<Image>().color = Color.red;
                 enemysHudmenu.SetActive(true);
                 herosHudmenu.SetActive(false);
                 break;

@@ -7,14 +7,15 @@ public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu Instance;
     public GameObject pauseMenu;
+    public GameObject HudMenus;
     public CanvasGroup HerosHudMenu;
     public CanvasGroup EnemysHudMenu;
     public GameObject timer;
-    public GameObject endTurnButton;
-    public CanvasGroup logToggle;
-    public GameObject log;
-    public CanvasGroup gameTimerToggle;
     public CanvasGroup gameTimer;
+    public CanvasGroup gameTimerToggle;
+    public GameObject log;
+    public CanvasGroup logToggle;
+    public GameObject endTurnButton;
     public bool isPaused;
 
     void Awake()
@@ -47,13 +48,15 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
+        HudMenus.SetActive(false);
         HerosHudMenu.alpha = 0f;
         EnemysHudMenu.alpha = 0f;
+        endTurnButton.SetActive(false);
+        log.SetActive(false);
         logToggle.alpha = 0f;
         gameTimerToggle.alpha = 0f;
-        log.SetActive(false);
+        gameTimer.alpha = 0f;
         timer.SetActive(false);
-        endTurnButton.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
         PlayerManager.Instance.DeselectUnit();
@@ -82,13 +85,15 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        HudMenus.SetActive(true);
         HerosHudMenu.alpha = 1f;
         EnemysHudMenu.alpha = 1f;
-        logToggle.alpha = 1f;
+        endTurnButton.SetActive(true);
         log.SetActive(true);
+        logToggle.alpha = 1f;
+        gameTimer.alpha = 1f;
         gameTimerToggle.alpha = 1f;
         timer.SetActive(true);
-        endTurnButton.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
